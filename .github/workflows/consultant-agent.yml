@@ -1,0 +1,49 @@
+name: AI SDLC Danışman Ajanı
+
+# Sunucusuz (Serverless) IssueOps ajanı:
+# - Yeni bir danışmanlık Issue'su açıldığında veya bir yorum eklendiğinde tetiklenir.
+# - Durumu Issue etiketleriyle, hafızayı yorum geçmişiyle yönetir.
+# - Beyni: consultant-agent/ altındaki Node.js/TypeScript betiği.
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+# Aynı Issue için eşzamanlı çalışmaları engelle (durum tutarlılığı).
+concurrency:
+  group: consultant-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+permissions:
+  issues: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  consult:
+    runs-on: ubuntu-latest
+    # Sonsuz döngü koruması: ajan kendi yorumuna tepki vermesin.
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    steps:
+      - name: Repoyu çek
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Bağımlılıkları kur
+        working-directory: consultant-agent
+        run: npm install --no-audit --no-fund
+
+      - name: Danışman ajanını çalıştır
+        working-directory: consultant-agent
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # İsteğe bağlı model override:
+          # LLM_MODEL: claude-opus-4-8
+        run: npx tsx src/index.ts

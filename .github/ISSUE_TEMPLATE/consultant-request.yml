@@ -1,0 +1,26 @@
+name: "Yeni Danışmanlık Talebi"
+description: "AI destekli SDLC dönüşümü için danışman ajanla sohbet başlatın."
+title: "[Danışmanlık] Firmanız için AI SDLC dönüşümü"
+labels: ["consultant"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## AI SDLC Dönüşüm Danışmanı
+        Bu talebi açtığınızda otonom danışman ajan size yorumlarla yanıt verecek.
+        Aşağıdaki alanları doldurmanız yeterli; gerisini sohbet üzerinden ilerleteceğiz.
+  - type: input
+    id: company
+    attributes:
+      label: "Firma / Ekip"
+      placeholder: "Örn. Mutfak Yazılımevi — Platform ekibi"
+    validations:
+      required: false
+  - type: textarea
+    id: goal
+    attributes:
+      label: "Kısaca hedefiniz nedir?"
+      description: "AI dönüşümünden temel beklentiniz (hız, kalite, maliyet, güvenlik...)"
+      placeholder: "Örn. Kod inceleme süremizi kısaltmak ve sürüm sıklığını artırmak istiyoruz."
+    validations:
+      required: true
