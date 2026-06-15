@@ -4,3 +4,7 @@
 > **Kategori:** 2. Muhakeme ve Planlama
 
 Ajanın ürettiği bir kodu, metni veya kararı dışarıya (veya bir sonraki adıma) iletmeden önce kendi kendine eleştirmesi sürecidir. Ajan "Burada hata yaptım mı?" veya "Bu çıktı asıl hedefle uyuşuyor mu?" diye sorarak hatalı çıktıları otonom olarak revize eder.
+
+## Mini Senaryo
+
+> Ajan yazdığı kodu çalıştırmadan önce "bu döngü sonsuza gider" diye fark edip düzeltir.

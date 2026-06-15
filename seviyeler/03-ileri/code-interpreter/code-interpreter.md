@@ -4,3 +4,7 @@
 > **Kategori:** 5. Araç Kullanımı ve Entegrasyon
 
 Ajanın görevi çözmek için kod yazıp güvenli bir ortamda çalıştırabilmesidir. Hesaplama, veri analizi ve dosya işleme gibi görevlerde güçlüdür.
+
+## Mini Senaryo
+
+> Ajan, bir CSV'deki satışları analiz etmek için anlık Python kodu yazıp çalıştırır.

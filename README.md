@@ -33,7 +33,8 @@ kavramları basic'ten master'a sıralar.
 | 10 | [Değerlendirme ve Kalite](docs/10-degerlendirme-ve-kalite.md) | Ajanın performansını ve güvenilirliğini ölçmek |
 | 11 | [Operasyon ve Gözlemlenebilirlik](docs/11-operasyon-ve-gozlemlenebilirlik.md) | Ajanı canlıda ayakta tutmak, izlemek, hata ayıklamak |
 
-Tüm terimlerin alfabetik hızlı özeti için: **[Sözlük (Glossary)](docs/sozluk.md)**
+Her terimi **kısa açıklama + mini senaryo** ile anlatan kapsamlı sözlük için:
+**[📖 GLOSSARY.md](GLOSSARY.md)**
 
 ### Seviyeye Göre Gezinme
 
@@ -68,5 +69,7 @@ yeni terim eklerken betikteki listeye ekleyip yeniden çalıştırman yeterlidir
 
 Yeni kavram eklemek veya açıklamaları geliştirmek için ilgili kategori dosyasını
 düzenleyin; kavramı doğru **amaç kategorisine** ve doğru **seviyeye** (🟢/🔵/🟠/🔴)
-yerleştirin. Yeni terimi [sözlüğe](docs/sozluk.md) de ekleyin. Açıklamaların
-kısa, net ve Türkçe olmasına özen gösterin.
+yerleştirin. Terim listesinin **tek kaynağı** [`scripts/generate_levels.py`](scripts/generate_levels.py)
+betiğidir; yeni terimi oradaki listeye (kısa açıklama + mini senaryo ile birlikte)
+ekleyip betiği çalıştırın — `GLOSSARY.md` ve `seviyeler/` ağacı otomatik güncellenir.
+Açıklamaların kısa, net ve Türkçe olmasına özen gösterin.

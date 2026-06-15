@@ -4,3 +4,7 @@
 > **Kategori:** 6. İş Akışı ve Yürütme
 
 Bir ajanın çıktısının, bir sonraki ajanın girdisi olduğu yapılandırılmış, ardışık operasyonlar dizisidir. Her aşama belirli bir işlemi yapar ve sonucu zincirdeki bir sonraki aşamaya iletir.
+
+## Mini Senaryo
+
+> Belge → OCR ajanı → çıkarım ajanı → doğrulama ajanı; her aşamanın çıktısı diğerine girer.

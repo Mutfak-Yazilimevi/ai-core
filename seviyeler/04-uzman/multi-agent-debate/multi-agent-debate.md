@@ -4,3 +4,7 @@
 > **Kategori:** 7. Çoklu Ajan ve Koordinasyon
 
 Birden çok ajanın aynı problem üzerinde tartışarak, birbirinin argümanlarını sınayarak daha doğru bir sonuca yakınsamasıdır.
+
+## Mini Senaryo
+
+> İki ajan bir yatırım kararını savunup eleştirir; tartışma sonunda daha sağlam bir öneri çıkar.

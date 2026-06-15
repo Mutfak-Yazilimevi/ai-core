@@ -7,6 +7,10 @@ Markdown dosyası olarak yer alır:
 seviyeler/<seviye>/<terim>/<terim>.md
 ```
 
+Her terim sayfası; kısa tanım, kategori ve bir **mini senaryo** içerir.
+Tüm terimlerin kısa açıklama + senaryo özeti için kökteki
+[GLOSSARY.md](../GLOSSARY.md) dosyasına bakın.
+
 | Seviye | Klasör | Kavram Sayısı |
 |--------|--------|---------------|
 | 🟢 Temel (Basic) | [`01-temel/`](01-temel/) | 17 |
