@@ -35,6 +35,16 @@ kavramları basic'ten master'a sıralar.
 
 Tüm terimlerin alfabetik hızlı özeti için: **[Sözlük (Glossary)](docs/sozluk.md)**
 
+### Seviyeye Göre Gezinme
+
+Her kavramı kendi ayrı dosyasında, seviye klasörleri altında da inceleyebilirsin
+(`seviyeler/<seviye>/<terim>/<terim>.md`):
+
+- 🟢 [Temel (Basic)](seviyeler/01-temel/) · 🔵 [Orta (Intermediate)](seviyeler/02-orta/) · 🟠 [İleri (Advanced)](seviyeler/03-ileri/) · 🔴 [Uzman (Master)](seviyeler/04-uzman/)
+
+Bu ağaç, [`scripts/generate_levels.py`](scripts/generate_levels.py) ile üretilir;
+yeni terim eklerken betikteki listeye ekleyip yeniden çalıştırman yeterlidir.
+
 ## Seviye Sistemi
 
 | Seviye | Anlamı |
