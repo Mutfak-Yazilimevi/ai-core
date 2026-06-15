@@ -119,8 +119,12 @@ Ayrıca reponuzda **Issues** özelliğinin açık olduğundan emin olun
 
 ---
 
-## Lisans ve katkı
+## Katkı
 
 Sorularınız, düzeltme önerileriniz veya yeni kavram eklemek için bir Issue açabilir
 ya da Pull Request gönderebilirsiniz. Açıklamaların kısa, net ve Türkçe olmasına
 özen gösterin.
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
