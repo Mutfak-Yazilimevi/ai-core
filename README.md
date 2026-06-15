@@ -1,91 +1,62 @@
 # ai-core
 
 **Agentic AI (Otonom Yapay Zekâ Ajanları)** dünyasının temel yapı taşlarını
-oluşturan 24 kavramın Türkçe referans kılavuzu.
+oluşturan kavramların Türkçe referans kılavuzu.
 
-Bu depo, otonom yapay zekâ ajanları geliştirirken sık karşılaşılan terimleri;
-ajan mimarisi, iletişim, bilgi yönetimi, güvenlik, iş akışı ve gözlemlenebilirlik
-başlıkları altında derli toplu bir şekilde sunmayı amaçlar.
+Bu depo, otonom yapay zekâ ajanları geliştirirken karşılaşılan kavramları
+**amaçlarına göre 11 kategoriye** ayırır ve her kategori içinde
+**🟢 Temel → 🔵 Orta → 🟠 İleri → 🔴 Uzman** olarak derecelendirir. Böylece
+hem bir sözlük hem de bir öğrenme yol haritası işlevi görür.
 
-## İçindekiler
+## 🎯 Başlangıç Noktası
 
-> 🎯 **Amaca göre kategoriler + Basic→Master derecelendirme** ve önerilen öğrenme
-> sırası için: **[Kategoriler ve Öğrenme Yolu](docs/00-kategoriler-ve-ogrenme-yolu.md)**
-> (tüm kavramları 11 amaç kategorisinde 🟢→🔵→🟠→🔴 seviyeleriyle sunar).
+> **[Kategoriler ve Öğrenme Yolu (Basic → Master)](docs/00-kategoriler-ve-ogrenme-yolu.md)**
+> — Tüm kavramları amaca göre 11 kategoride, seviye derecelendirmesiyle ve
+> önerilen öğrenme sırasıyla tek bakışta sunan genel bakış / matris.
 
-Kavramlar aşağıda tematik bölümlerde tanımlanır:
+## Kategoriler
 
-| Bölüm | Başlık | Kavramlar |
-|-------|--------|-----------|
-| 0 | [Kategoriler ve Öğrenme Yolu (Basic→Master)](docs/00-kategoriler-ve-ogrenme-yolu.md) | Amaca göre 11 kategori, seviye derecelendirmesi ve öğrenme sırası |
-| 1 | [Temel Ajan ve İletişim Kavramları](docs/01-temel-ajan-ve-iletisim.md) | Agent Loop, Orchestrator, Subagent, MCP, Tool Use, A2A Protocol |
-| 2 | [Bilgi Yönetimi ve Güvenlik](docs/02-bilgi-yonetimi-ve-guvenlik.md) | Memory, RAG, Grounding, Context Engineering, System Prompt, Guardrails |
-| 3 | [İş Akışı ve Yürütme Denetimi](docs/03-is-akisi-ve-yurutme-denetimi.md) | Policy Layer, Sandboxing, HITL, Handoffs, Agentic Pipeline, Task State |
-| 4 | [Performans ve Çoklu Sistemler](docs/04-performans-ve-coklu-sistemler.md) | Parallel Execution, Evals, Observability, Agent Identity, Multi-Agent, Agent Protocols |
-| 5 | [İleri Düzey ve İlgili Kavramlar](docs/05-ileri-duzey-ve-ilgili-kavramlar.md) | ReAct, CoT, ToT, Reflexion, Multi-Agent Debate, RAG altyapısı, Function Calling, Prompt Injection, LLM-as-a-Judge ve daha fazlası |
-| 6 | [Mimari ve Operasyonel Kavramlar](docs/06-mimari-ve-operasyonel-kavramlar.md) | ADLC, State Machine/FSM, Task Decomposition, Idempotency, Semantic Routing, Context Window, Bellek mimarisi, HOTL, LLMOps/AgentOps, Telemetry, Tokenization, Top-P/Top-K, Hallucination |
+Tüm kavramlar, amaçlarına göre aşağıdaki kategorilerde tanımlanır. Her dosya,
+kavramları basic'ten master'a sıralar.
 
-> **Not:** 1–4. bölümler görseldeki **24 temel kavramı**; 5. bölüm literatürde
-> sık geçen **ileri düzey** kavramları; 6. bölüm **mimari/operasyonel** kavramları
-> kapsar. 0. bölüm ise tüm bu kavramları **amaca göre kategorize edip
-> derecelendirir**.
+| # | Kategori | Amaç |
+|---|----------|------|
+| 1 | [Temeller ve Çalışma Modeli](docs/01-temeller-ve-calisma-modeli.md) | Ajanın ne olduğu, neyden oluştuğu ve nasıl çalıştığı |
+| 2 | [Muhakeme ve Planlama](docs/02-muhakeme-ve-planlama.md) | Ajanın nasıl düşündüğü, plan yaptığı ve karar verdiği |
+| 3 | [Bağlam ve İstem Mühendisliği](docs/03-baglam-ve-istem-muhendisligi.md) | Modele doğru bilgiyi doğru biçimde verme |
+| 4 | [Bellek ve Bilgi Yönetimi](docs/04-bellek-ve-bilgi-yonetimi.md) | Ajanın nasıl hatırladığı ve bilgiye eriştiği |
+| 5 | [Araç Kullanımı ve Entegrasyon](docs/05-arac-kullanimi-ve-entegrasyon.md) | Ajanın dış dünyada nasıl eylem aldığı |
+| 6 | [İş Akışı ve Yürütme](docs/06-is-akisi-ve-yurutme.md) | Görevlerin nasıl yürütüldüğü ve dayanıklılığı |
+| 7 | [Çoklu Ajan ve Koordinasyon](docs/07-coklu-ajan-ve-koordinasyon.md) | Birden fazla ajanın birlikte nasıl çalıştığı |
+| 8 | [İletişim ve Protokoller](docs/08-iletisim-ve-protokoller.md) | Ajanların ve sistemlerin nasıl konuştuğu |
+| 9 | [Güvenlik, Hizalama ve Denetim](docs/09-guvenlik-hizalama-ve-denetim.md) | Ajanı güvenli, sınırlı ve denetlenebilir tutmak |
+| 10 | [Değerlendirme ve Kalite](docs/10-degerlendirme-ve-kalite.md) | Ajanın performansını ve güvenilirliğini ölçmek |
+| 11 | [Operasyon ve Gözlemlenebilirlik](docs/11-operasyon-ve-gozlemlenebilirlik.md) | Ajanı canlıda ayakta tutmak, izlemek, hata ayıklamak |
 
-Hızlı arama için tüm terimlerin tek sayfalık özeti:
-[Sözlük (Glossary)](docs/sozluk.md)
+Tüm terimlerin alfabetik hızlı özeti için: **[Sözlük (Glossary)](docs/sozluk.md)**
 
-## Kavramların Tam Listesi
+## Seviye Sistemi
 
-### Temel Ajan ve İletişim Kavramları
-1. **Agent Loop (Ajan Döngüsü)**
-2. **Orchestrator (Orkestratör)**
-3. **Subagent (Alt Ajan)**
-4. **MCP (Model Context Protocol)**
-5. **Tool Use (Araç Kullanımı)**
-6. **A2A Protocol (Ajanlar Arası Protokol)**
+| Seviye | Anlamı |
+|--------|--------|
+| 🟢 **Temel (Basic)** | Herkesin bilmesi gereken giriş kavramları. |
+| 🔵 **Orta (Intermediate)** | Çalışan bir ajan kurarken gereken kavramlar. |
+| 🟠 **İleri (Advanced)** | Üretim ve ölçeklenme için gereken kavramlar. |
+| 🔴 **Uzman (Master)** | Kurumsal/dağıtık mimari ve derin uzmanlık kavramları. |
 
-### Bilgi Yönetimi ve Güvenlik
-7. **Memory (Bellek)**
-8. **RAG (Retrieval-Augmented Generation)**
-9. **Grounding (Temellendirme)**
-10. **Context Engineering (Bağlam Mühendisliği)**
-11. **System Prompt (Sistem İstemi)**
-12. **Guardrails (Güvenlik Bariyerleri)**
+## Önerilen Öğrenme Sırası
 
-### İş Akışı ve Yürütme Denetimi
-13. **Policy Layer (Politika Katmanı)**
-14. **Sandboxing (Korumalı Alan)**
-15. **HITL (Human-in-the-Loop — Döngüde İnsan)**
-16. **Handoffs (Devir İşlemleri)**
-17. **Agentic Pipeline (Ajan Boru Hattı)**
-18. **Task State (Görev Durumu)**
-
-### Performans ve Çoklu Sistemler
-19. **Parallel Execution (Paralel Yürütme)**
-20. **Evals (Değerlendirmeler)**
-21. **Observability (Gözlemlenebilirlik)**
-22. **Agent Identity (Ajan Kimliği)**
-23. **Multi-Agent (Çoklu Ajan)**
-24. **Agent Protocols (Ajan Protokolleri)**
-
-### İleri Düzey ve İlgili Kavramlar (Ek)
-- **Muhakeme & Planlama:** ReAct, Chain-of-Thought, Tree of Thoughts, Reflexion, Plan-and-Execute, Self-Consistency
-- **Çoklu Ajan Desenleri:** Supervisor/Manager-Worker, Multi-Agent Debate, Swarm, Routing, Evaluator-Optimizer, Blackboard
-- **Bilgi & Bağlam:** Embeddings/Vector DB, Chunking, Knowledge Graph, Bellek Türleri, Context Compression
-- **Araç & Yürütme:** Function Calling, Computer/Browser Use, Code Interpreter, Caching/Retry/Circuit Breaker, Budget/Loop Limits
-- **Güvenlik & Hizalama:** Prompt Injection/Jailbreak, Alignment & Constitutional AI, Red Teaming, Least Privilege
-- **Değerlendirme & Öğrenme:** LLM-as-a-Judge, Trajectory Evaluation, In-context Learning, Fine-tuning/RLHF/RLAIF
-- **Kavramsal Çerçeve:** Workflow vs Agent, Autonomy Levels, Determinism/Temperature
-
-### Mimari ve Operasyonel Kavramlar (Ek)
-- **Mimari & Süreç:** Agent (temel tanım), ADLC, Reasoning Engine, State Machine/FSM, Task Decomposition, Prompt Chaining, Idempotency, Semantic Routing
-- **Bellek & Bağlam Mimarisi:** Context Window, Working/Short-term Memory, Episodic Memory, Semantic Memory, Semantic Caching
-- **Otonomi & Denetim:** HOTL (Human-on-the-Loop)
-- **Operasyon & Gözlemlenebilirlik:** LLMOps/AgentOps, Telemetry
-- **Model Parametreleri:** Foundation Model, Tokens/Tokenization, Top-P/Top-K
-- **Güvenilirlik & Riskler:** Hallucination
+1. **🟢 Temel kavramları yatay tara** — her kategorideki Basic satırlarını öğren.
+2. **🔵 Orta seviyeyle ilk ajanını kur** — Tool Use, RAG, Orchestrator, Evals,
+   Guardrails ile çalışan basit bir ajan inşa et.
+3. **🟠 İleri seviyeyle ölçekle** — çoklu ajan koordinasyonu, gelişmiş bellek,
+   politika katmanı ve gözlemlenebilirlik ekle.
+4. **🔴 Uzman seviyeyle kurumsallaştır** — ADLC, Idempotency, State Machine,
+   Swarm, Constitutional AI ve LLMOps ile dağıtık/üretim mimarisine geç.
 
 ## Katkı
 
-Yeni kavram eklemek veya mevcut açıklamaları geliştirmek için ilgili bölüm
-dosyasını düzenleyip bir Pull Request açabilirsiniz. Açıklamaların kısa, net ve
-Türkçe olmasına özen gösterin.
+Yeni kavram eklemek veya açıklamaları geliştirmek için ilgili kategori dosyasını
+düzenleyin; kavramı doğru **amaç kategorisine** ve doğru **seviyeye** (🟢/🔵/🟠/🔴)
+yerleştirin. Yeni terimi [sözlüğe](docs/sozluk.md) de ekleyin. Açıklamaların
+kısa, net ve Türkçe olmasına özen gösterin.
