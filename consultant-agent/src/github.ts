@@ -148,7 +148,10 @@ function pilotWorkflowYaml(focus: string | undefined): string {
   return `${focusNote}name: AI Kod İnceleme Ajanı (Pilot)
 
 # Bu iş akışı, AI SDLC Dönüşüm Danışmanı tarafından pilot olarak eklenmiştir.
-# Açılan/güncellenen Pull Request'lere otomatik bir AI ön incelemesi ekler.
+# Açılan/güncellenen Pull Request'lerin diff'ini bir LLM ile inceleyip, bulguları
+# tek bir derli toplu yorum olarak PR'a yazar.
+#
+# Gereksinim: Repo Secrets içinde LLM_API_KEY (Anthropic API anahtarı) tanımlı olmalı.
 
 on:
   pull_request:
@@ -162,13 +165,23 @@ jobs:
   ai-review:
     runs-on: ubuntu-latest
     steps:
-      - name: PR'ı incele (yer tutucu)
+      - name: Repoyu çek
+        uses: actions/checkout@v4
+
+      - name: Node.js kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: İnceleyiciyi kur
+        working-directory: consultant-agent
+        run: npm install --no-audit --no-fund
+
+      - name: PR'ı incele
+        working-directory: consultant-agent
         env:
           GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
-          LLM_API_KEY: \${{ secrets.LLM_API_KEY }}
-        run: |
-          echo "AI Kod İnceleme Ajanı pilotu çalıştı."
-          echo "Sonraki adım: PR diff'ini LLM_API_KEY ile bir LLM'e gönderip"
-          echo "yapılandırılmış inceleme yorumları üreten betiği bağlamak."
+          ANTHROPIC_API_KEY: \${{ secrets.LLM_API_KEY }}
+        run: npx tsx src/reviewer.ts
 `;
 }

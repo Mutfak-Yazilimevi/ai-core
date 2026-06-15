@@ -65,7 +65,27 @@ consultant-agent/
     ├── states.ts    # Durum makinesi ve faz bazlı sistem istemleri
     ├── github.ts    # Octokit yardımcıları: etiket/hafıza/yorum/pilot dosyası
     ├── llm.ts       # Anthropic çağrısı + araç (tool use) döngüsü
+    ├── reviewer.ts  # Pilot: çalışan AI Kod İnceleme Ajanı (PR diff → bulgular)
     └── config.ts    # Sabitler (model, sınırlar)
+```
+
+## Pilot: AI Kod İnceleme Ajanı
+
+Müşteri teklifi onaylayıp pilotu istediğinde, danışman ajan `create_pilot_workflow`
+aracıyla repoya [`.github/workflows/ai-code-reviewer.yml`](../.github/workflows/ai-code-reviewer.yml)
+benzeri bir iş akışı ekler. Bu iş akışı **çalışan** bir inceleyicidir:
+
+1. Açılan/güncellenen her PR'de tetiklenir.
+2. [`src/reviewer.ts`](src/reviewer.ts) değişen dosyaların diff'ini toplar.
+3. Diff'i Claude'a gönderip **yapılandırılmış** inceleme bulguları (önem, dosya,
+   başlık, açıklama, öneri) ister.
+4. Bulguları öncelik gruplarıyla (🔴/🟠/🟡) tek bir derli toplu yorum olarak PR'a yazar.
+
+Yerelde denemek için (bir PR bağlamında):
+
+```bash
+cd consultant-agent
+GITHUB_TOKEN=... ANTHROPIC_API_KEY=... npm run review
 ```
 
 ## Güvenlik notları

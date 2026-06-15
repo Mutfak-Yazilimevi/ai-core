@@ -6,6 +6,7 @@
   "description": "Sunucusuz (GitHub Actions tabanlı) AI destekli SDLC Dönüşüm Danışmanı ajanı",
   "scripts": {
     "start": "tsx src/index.ts",
+    "review": "tsx src/reviewer.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
