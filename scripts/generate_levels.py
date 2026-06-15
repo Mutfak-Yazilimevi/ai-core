@@ -409,18 +409,26 @@ PRIMER = [
 
 
 def build_term_md(emoji, label, category, title_tr, title_en, desc, scenario):
+    """Yeni bir terim için iskelet sayfa. Ayrıntılı bölümler elle/zenginleştirme
+    ile doldurulur; bu betik MEVCUT terim dosyalarının üzerine YAZMAZ."""
     return (f"# {title_tr} ({title_en})\n\n"
             f"> **Seviye:** {emoji} {label}  \n"
             f"> **Kategori:** {category}\n\n"
             f"{desc}\n\n"
             f"## Mini Senaryo\n\n"
-            f"> {scenario}\n")
+            f"> {scenario}\n\n"
+            f"## 📖 Ayrıntılı Açıklama\n\n"
+            f"_(Doldurulacak.)_\n\n"
+            f"## 🎬 Detaylı Senaryo\n\n"
+            f"_(Doldurulacak.)_\n\n"
+            f"## 💻 Kullanım / Uygulama Örneği\n\n"
+            f"_(Doldurulacak.)_\n\n"
+            f"## 🔗 İlgili Kavramlar\n\n"
+            f"_(Doldurulacak.)_\n")
 
 
 def main():
-    if os.path.isdir(BASE):
-        shutil.rmtree(BASE)
-    os.makedirs(BASE)
+    os.makedirs(BASE, exist_ok=True)
 
     by_level = {k: [] for k in LEVELS}
     for t in TERMS:
@@ -447,7 +455,7 @@ def main():
     for key in ["temel", "orta", "ileri", "uzman"]:
         folder, emoji, label, _ = LEVELS[key]
         level_dir = os.path.join(BASE, folder)
-        os.makedirs(level_dir)
+        os.makedirs(level_dir, exist_ok=True)
         terms = sorted(by_level[key], key=lambda t: t[2])
 
         idx = [f"# {emoji} {label}\n",
@@ -463,9 +471,12 @@ def main():
 
         for _l, category, slug, title_tr, title_en, desc, _short, scenario in terms:
             term_dir = os.path.join(level_dir, slug)
-            os.makedirs(term_dir)
-            with open(os.path.join(term_dir, f"{slug}.md"), "w", encoding="utf-8") as f:
-                f.write(build_term_md(emoji, label, category, title_tr, title_en, desc, scenario))
+            os.makedirs(term_dir, exist_ok=True)
+            term_path = os.path.join(term_dir, f"{slug}.md")
+            # Mevcut (zenginleştirilmiş) terim sayfalarını KORU; yalnızca eksikse iskelet yaz.
+            if not os.path.exists(term_path):
+                with open(term_path, "w", encoding="utf-8") as f:
+                    f.write(build_term_md(emoji, label, category, title_tr, title_en, desc, scenario))
 
     # ---- kök GLOSSARY.md (kategoriye göre; kısa açıklama + mini senaryo) ----
     g = ["# 📖 Sözlük (Glossary)\n",
