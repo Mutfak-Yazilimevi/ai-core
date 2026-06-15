@@ -17,6 +17,10 @@ Kavramlar altı tematik grupta toplanmıştır:
 | 2 | [Bilgi Yönetimi ve Güvenlik](docs/02-bilgi-yonetimi-ve-guvenlik.md) | Memory, RAG, Grounding, Context Engineering, System Prompt, Guardrails |
 | 3 | [İş Akışı ve Yürütme Denetimi](docs/03-is-akisi-ve-yurutme-denetimi.md) | Policy Layer, Sandboxing, HITL, Handoffs, Agentic Pipeline, Task State |
 | 4 | [Performans ve Çoklu Sistemler](docs/04-performans-ve-coklu-sistemler.md) | Parallel Execution, Evals, Observability, Agent Identity, Multi-Agent, Agent Protocols |
+| 5 | [İleri Düzey ve İlgili Kavramlar](docs/05-ileri-duzey-ve-ilgili-kavramlar.md) | ReAct, CoT, ToT, Reflexion, Multi-Agent Debate, RAG altyapısı, Function Calling, Prompt Injection, LLM-as-a-Judge ve daha fazlası |
+
+> **Not:** 1–4. bölümler görseldeki **24 temel kavramı**; 5. bölüm ise
+> literatürde sık geçen **ileri düzey ve ilgili kavramları** kapsar.
 
 Hızlı arama için tüm terimlerin tek sayfalık özeti:
 [Sözlük (Glossary)](docs/sozluk.md)
@@ -54,6 +58,15 @@ Hızlı arama için tüm terimlerin tek sayfalık özeti:
 22. **Agent Identity (Ajan Kimliği)**
 23. **Multi-Agent (Çoklu Ajan)**
 24. **Agent Protocols (Ajan Protokolleri)**
+
+### İleri Düzey ve İlgili Kavramlar (Ek)
+- **Muhakeme & Planlama:** ReAct, Chain-of-Thought, Tree of Thoughts, Reflexion, Plan-and-Execute, Self-Consistency
+- **Çoklu Ajan Desenleri:** Supervisor/Manager-Worker, Multi-Agent Debate, Swarm, Routing, Evaluator-Optimizer, Blackboard
+- **Bilgi & Bağlam:** Embeddings/Vector DB, Chunking, Knowledge Graph, Bellek Türleri, Context Compression
+- **Araç & Yürütme:** Function Calling, Computer/Browser Use, Code Interpreter, Caching/Retry/Circuit Breaker, Budget/Loop Limits
+- **Güvenlik & Hizalama:** Prompt Injection/Jailbreak, Alignment & Constitutional AI, Red Teaming, Least Privilege
+- **Değerlendirme & Öğrenme:** LLM-as-a-Judge, Trajectory Evaluation, In-context Learning, Fine-tuning/RLHF/RLAIF
+- **Kavramsal Çerçeve:** Workflow vs Agent, Autonomy Levels, Determinism/Temperature
 
 ## Katkı
 

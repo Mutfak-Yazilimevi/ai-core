@@ -29,3 +29,41 @@ dosyalarına bakınız.
 | 22 | Agent Identity | Ajan Kimliği | Ajanların güvenli kimlik doğrulaması için bilgiler. |
 | 23 | Multi-Agent | Çoklu Ajan | Birden fazla ajanın işbirlikçi çalıştığı sistemler. |
 | 24 | Agent Protocols | Ajan Protokolleri | Ajanlar arası standart prosedürlerin üst başlığı. |
+
+## İleri Düzey ve İlgili Kavramlar
+
+| Terim (İngilizce) | Türkçe | Kısa Açıklama |
+|-------------------|--------|----------------|
+| ReAct | Muhakeme + Eylem | Düşünme ve eylemi iç içe yürüten ajan paradigması. |
+| Chain-of-Thought (CoT) | Düşünce Zinciri | Adım adım açık akıl yürütme. |
+| Tree of Thoughts (ToT) | Düşünce Ağacı | Birden çok muhakeme dalını keşfedip seçme. |
+| Reflexion | Öz-Yansıma | Ajanın kendi çıktısını eleştirip düzeltmesi. |
+| Plan-and-Execute | Planla-ve-Yürüt | Önce plan çıkarıp sonra adımları uygulama. |
+| Self-Consistency | Öz-Tutarlılık | Çoklu çıkarımdan çoğunlukla en tutarlıyı seçme. |
+| Supervisor / Manager-Worker | Yönetici-İşçi | Hiyerarşik görev dağıtım deseni. |
+| Multi-Agent Debate | Ajan Münazarası | Ajanların tartışarak doğruya yakınsaması. |
+| Swarm | Sürü | Merkeziyetsiz, eşler arası ajan topluluğu. |
+| Routing | Yönlendirme | Girdiyi doğru uzman ajana/araca yönlendirme. |
+| Evaluator-Optimizer | Değerlendirici-İyileştirici | Üretip değerlendirip iyileştiren döngü. |
+| Blackboard | Kara Tahta | Paylaşılan bellek üzerinden işbirliği mimarisi. |
+| Embeddings / Vector DB | Gömme / Vektör Veritabanı | Anlamsal vektörle erişim; RAG altyapısı. |
+| Chunking | Parçalama | Belgeleri erişim için anlamlı parçalara bölme. |
+| Knowledge Graph | Bilgi Grafiği | Yapılandırılmış ilişkisel bellek. |
+| Semantic/Episodic/Procedural Memory | Bellek Türleri | Anlamsal, epizodik ve prosedürel bellek. |
+| Context Compression | Bağlam Sıkıştırma | Geçmiş bilgiyi özetleyerek sıkıştırma. |
+| Function Calling | Fonksiyon Çağırma | Tool Use'un yapısal biçimi. |
+| Computer / Browser Use | Bilgisayar / Tarayıcı Kullanımı | Gerçek arabirimleri kullanarak eylem alma. |
+| Code Interpreter | Kod Yorumlayıcı | Ajanın kod yazıp çalıştırması. |
+| Caching / Retry / Circuit Breaker | Dayanıklılık Desenleri | Önbellek, yeniden deneme, devre kesme. |
+| Budget / Loop Limits | Bütçe / Döngü Sınırı | Maliyet ve sonsuz döngü kontrolü. |
+| Prompt Injection / Jailbreak | İstem Enjeksiyonu / Kısıt Aşımı | Ajanlara yönelik temel saldırı türleri. |
+| Alignment / Constitutional AI | Hizalama / Anayasal YZ | Değerlerle uyum ve ilkeyle öz-denetim. |
+| Red Teaming | Kırmızı Takım | Saldırgan test ile zafiyet bulma. |
+| Least Privilege | En Az Yetki | Yalnızca gerekli asgari erişimi verme. |
+| LLM-as-a-Judge | Yargıç Olarak LLM | LLM ile otomatik çıktı puanlama. |
+| Trajectory Evaluation | Yörünge Değerlendirmesi | Sonucu değil tüm adımları değerlendirme. |
+| In-context Learning (Few/Zero-shot) | Bağlam İçi Öğrenme | İstem içinde örnekle/örneksiz öğretme. |
+| Fine-tuning / RLHF / RLAIF | İnce Ayar / Pekiştirmeli Hizalama | Modeli özelleştirme ve hizalama yöntemleri. |
+| Workflow vs Agent | İş Akışı / Ajan Ayrımı | Sabit kodlanmış akış ile otonom ajan farkı. |
+| Autonomy Levels | Otonomi Seviyeleri | Ajanın bağımsızlık derecesi. |
+| Determinism / Temperature | Belirlenircilik / Sıcaklık | Çıktı kararlılığını belirleyen ayar. |
