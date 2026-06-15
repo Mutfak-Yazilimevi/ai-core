@@ -72,8 +72,9 @@ consultant-agent/
 ## Pilot: AI Kod İnceleme Ajanı
 
 Müşteri teklifi onaylayıp pilotu istediğinde, danışman ajan `create_pilot_workflow`
-aracıyla repoya [`.github/workflows/ai-code-reviewer.yml`](../.github/workflows/ai-code-reviewer.yml)
-benzeri bir iş akışı ekler. Bu iş akışı **çalışan** bir inceleyicidir:
+aracıyla repoya `.github/workflows/ai-code-reviewer.yml` adında bir iş akışı ekler.
+Bu dosya repoda hazır durmaz; içeriği [`src/github.ts`](src/github.ts) tarafından
+çalışma anında üretilir. Eklenen iş akışı **çalışan** bir inceleyicidir:
 
 1. Açılan/güncellenen her PR'de tetiklenir.
 2. [`src/reviewer.ts`](src/reviewer.ts) değişen dosyaların diff'ini toplar.
