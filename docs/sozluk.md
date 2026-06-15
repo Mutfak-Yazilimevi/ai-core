@@ -67,3 +67,28 @@ dosyalarına bakınız.
 | Workflow vs Agent | İş Akışı / Ajan Ayrımı | Sabit kodlanmış akış ile otonom ajan farkı. |
 | Autonomy Levels | Otonomi Seviyeleri | Ajanın bağımsızlık derecesi. |
 | Determinism / Temperature | Belirlenircilik / Sıcaklık | Çıktı kararlılığını belirleyen ayar. |
+
+## Mimari ve Operasyonel Kavramlar
+
+| Terim (İngilizce) | Türkçe | Kısa Açıklama |
+|-------------------|--------|----------------|
+| Agent | Ajan / Otonom Temsilci | Algılayan, çıkarım yapan, eyleme geçen özerk YZ sistemi. |
+| ADLC | Ajan Geliştirme Yaşam Döngüsü | Tasarımdan üretime ve izlemeye uçtan uca süreç. |
+| Reasoning Engine | Çıkarım Motoru | Mantıksal çıkarım ve karar işleten bilişsel altyapı. |
+| State Machine / FSM | Durum Makinesi | Süreçleri deterministik durum geçişleriyle kontrol etme. |
+| Task Decomposition | Görev Parçalama | Karmaşık hedefi alt görevlere bölme. |
+| Prompt Chaining | İstem Zincirleme | Çıktısı bir sonrakine girdi olan ardışık istemler. |
+| Idempotency | Eşetkisellik | Tekrarlı tetiklemede mükerrer değişikliği önleme. |
+| Semantic Routing | Semantik Yönlendirme | Talebi anlamsal bağlama göre uzman ajana yönlendirme. |
+| Context Window | Bağlam Penceresi | Modelin tek işlemde işleyebileceği maksimum veri boyutu. |
+| Working / Short-term Memory | Çalışan / Kısa Süreli Bellek | Aktif görevde kullanılan, görev sonunda sıfırlanan bellek. |
+| Episodic Memory | Bölümsel Bellek | Geçmiş olayları kronolojik hatırlama (uzun vadeli alt tür). |
+| Semantic Memory | Anlamsal Bellek | Genel doğru ve konseptlerin yapılandırılmış hafızası. |
+| Semantic Caching | Semantik Ön Bellekleme | Anlamsal eşleşmeyle LLM'e gitmeden önbellekten yanıt. |
+| HOTL | Döngü Üstünde İnsan | İnsanın süreci üstten izleyip gerektiğinde müdahale etmesi. |
+| LLMOps / AgentOps | LLM / Ajan Operasyonları | Ajan geliştirme-dağıtım-izleme operasyonel disiplini. |
+| Telemetry | Telemetri | Otomatik toplanan log, metrik ve izleme verileri bütünü. |
+| Foundation Model | Temel Model | Genel veriyle önceden eğitilmiş, uyarlanabilir taban model. |
+| Tokens / Tokenization | Jetonlar / Jetonlaştırma | Modelin işlediği en küçük yapı taşları; maliyet/sınır birimi. |
+| Top-P / Top-K | Örnekleme Parametreleri | Olasılık havuzunu daraltan örnekleme ayarları. |
+| Hallucination | Halüsinasyon / Sanrı | Modelin uydurma bilgiyi gerçekmiş gibi üretmesi. |

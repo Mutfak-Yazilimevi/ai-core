@@ -18,6 +18,7 @@ Kavramlar altı tematik grupta toplanmıştır:
 | 3 | [İş Akışı ve Yürütme Denetimi](docs/03-is-akisi-ve-yurutme-denetimi.md) | Policy Layer, Sandboxing, HITL, Handoffs, Agentic Pipeline, Task State |
 | 4 | [Performans ve Çoklu Sistemler](docs/04-performans-ve-coklu-sistemler.md) | Parallel Execution, Evals, Observability, Agent Identity, Multi-Agent, Agent Protocols |
 | 5 | [İleri Düzey ve İlgili Kavramlar](docs/05-ileri-duzey-ve-ilgili-kavramlar.md) | ReAct, CoT, ToT, Reflexion, Multi-Agent Debate, RAG altyapısı, Function Calling, Prompt Injection, LLM-as-a-Judge ve daha fazlası |
+| 6 | [Mimari ve Operasyonel Kavramlar](docs/06-mimari-ve-operasyonel-kavramlar.md) | ADLC, State Machine/FSM, Task Decomposition, Idempotency, Semantic Routing, Context Window, Bellek mimarisi, HOTL, LLMOps/AgentOps, Telemetry, Tokenization, Top-P/Top-K, Hallucination |
 
 > **Not:** 1–4. bölümler görseldeki **24 temel kavramı**; 5. bölüm ise
 > literatürde sık geçen **ileri düzey ve ilgili kavramları** kapsar.
@@ -67,6 +68,14 @@ Hızlı arama için tüm terimlerin tek sayfalık özeti:
 - **Güvenlik & Hizalama:** Prompt Injection/Jailbreak, Alignment & Constitutional AI, Red Teaming, Least Privilege
 - **Değerlendirme & Öğrenme:** LLM-as-a-Judge, Trajectory Evaluation, In-context Learning, Fine-tuning/RLHF/RLAIF
 - **Kavramsal Çerçeve:** Workflow vs Agent, Autonomy Levels, Determinism/Temperature
+
+### Mimari ve Operasyonel Kavramlar (Ek)
+- **Mimari & Süreç:** Agent (temel tanım), ADLC, Reasoning Engine, State Machine/FSM, Task Decomposition, Prompt Chaining, Idempotency, Semantic Routing
+- **Bellek & Bağlam Mimarisi:** Context Window, Working/Short-term Memory, Episodic Memory, Semantic Memory, Semantic Caching
+- **Otonomi & Denetim:** HOTL (Human-on-the-Loop)
+- **Operasyon & Gözlemlenebilirlik:** LLMOps/AgentOps, Telemetry
+- **Model Parametreleri:** Foundation Model, Tokens/Tokenization, Top-P/Top-K
+- **Güvenilirlik & Riskler:** Hallucination
 
 ## Katkı
 
