@@ -344,6 +344,67 @@ TERMS = [
      "Ajanın güvenlik bariyerlerini aşmak, mantıksal zafiyetlerini bulmak ve sisteme zararlı işlemler yaptırmak amacıyla bilinçli ve simüle edilmiş saldırılar düzenleyerek zafiyetleri proaktif olarak bulma sürecidir.",
      "Simüle saldırılarla ajan zafiyetlerini proaktif bulma.",
      "Güvenlik ekibi ajana kasıtlı tuzak istemler göndererek hangi durumlarda kural aştığını bulur."),
+
+    # ---- sonradan eklenen eksik kavramlar ----
+    ("orta", CATEGORY_ORDER[0], "multimodal", "Çok Kipli", "Multimodal",
+     "Ajanın yalnızca metni değil; görüntü, ses, video gibi farklı veri türlerini (kipleri) birlikte algılayıp üretebilme yeteneğidir. Gerçek dünyadaki çeşitli girdileri tek bir akışta işlemeyi sağlar.",
+     "Metin, görüntü, ses gibi farklı veri türlerini birlikte işleyebilme.",
+     "Kullanıcı bir faturanın fotoğrafını yükler; ajan görüntüyü okuyup tutarı metne döker."),
+    ("orta", CATEGORY_ORDER[10], "streaming", "Akış (Streaming)", "Streaming",
+     "Modelin yanıtını tamamı bitene kadar beklemeden, üretildikçe jeton jeton ileterek kullanıcıya anlık akış hâlinde sunmasıdır. Algılanan gecikmeyi (latency) azaltır ve etkileşimi canlı tutar.",
+     "Yanıtı tümü bitmeden, üretildikçe jeton jeton iletme.",
+     "Ajan uzun bir raporu yazarken, kullanıcı ilk cümleleri tamamı bitmeden ekranda görmeye başlar."),
+    ("ileri", CATEGORY_ORDER[3], "reranking", "Yeniden Sıralama", "Reranking",
+     "RAG'de ilk erişimle gelen aday belgelerin, soruyla gerçek alaka düzeyine göre ikinci bir modelle yeniden puanlanıp sıralanması ve en alakalıların öne çıkarılmasıdır. Erişim kalitesini ve yanıt doğruluğunu belirgin biçimde artırır.",
+     "Erişilen aday belgeleri alaka düzeyine göre yeniden sıralama.",
+     "Vektör araması 20 belge getirir; reranker bunları puanlayıp en alakalı 3'ünü modele verir."),
+]
+
+# Başlangıç sözlüğü: ajan dünyasının temel yapı taşları / platform ilkelleri.
+# (en, tr, short, scenario) — GLOSSARY.md'nin başında yer alır.
+PRIMER = [
+    ("Agent", "Ajan",
+     "Hedefe yönelik algılayan, karar veren ve eyleme geçen özerk yapay zekâ sistemi.",
+     "Sen hedefi söylersin; ajan adımları kendi planlayıp araçları kullanarak işi bitirir."),
+    ("Model / LLM", "Büyük Dil Modeli",
+     "Metni anlayıp üreten, ajanın \"beynini\" oluşturan eğitilmiş büyük dil modeli.",
+     "Ajanın düşünme kısmını yapan Claude/GPT gibi bir model çağrılır."),
+    ("Prompt", "İstem",
+     "Modele ne yapması gerektiğini anlatan girdi/talimat metni.",
+     "\"Bu e-postayı kibarca reddet\" bir prompt'tur."),
+    ("Context", "Bağlam",
+     "Modele bir istekte sağlanan tüm bilgi: talimat, geçmiş, belgeler ve araç çıktıları.",
+     "Ajana sistem istemi + sohbet geçmişi + ilgili belge birlikte bağlam olarak verilir."),
+    ("Token", "Jeton",
+     "Modelin metni işlerken kullandığı en küçük birim; maliyet ve sınır bununla ölçülür.",
+     "\"merhaba dünya\" yaklaşık 3 jetondur."),
+    ("Inference", "Çıkarım (Çalıştırma)",
+     "Eğitilmiş modelin bir girdiye karşılık yanıt ürettiği çalıştırma anı.",
+     "Her ajan adımında modele bir çıkarım çağrısı yapılır ve faturalandırılır."),
+    ("Tool", "Araç",
+     "Ajanın görevini yapmak için çağırabildiği dış fonksiyon, API veya yetenek.",
+     "\"sendEmail\" bir araçtır; ajan onu çağırarak e-posta gönderir."),
+    ("MCP (Model Context Protocol)", "Model Bağlam Protokolü",
+     "Ajanların araçlara ve veri kaynaklarına tek tip, güvenli bir arabirimle bağlandığı açık protokol.",
+     "Bir MCP sunucusu eklersin; ajan artık veritabanına standart şekilde erişir."),
+    ("Hook", "Kanca",
+     "Belirli bir olay gerçekleştiğinde (örn. araç çağrısı öncesi/sonrası) otomatik çalışan, kullanıcı tanımlı betik/tetikleyici.",
+     "Bir \"araç öncesi\" hook, ajan dosya silmeden önce çalışıp tehlikeli komutu engeller."),
+    ("Command / Slash Command", "Komut",
+     "Adıyla (örn. /review) çağrılan, yeniden kullanılabilir hazır istem veya iş akışı.",
+     "/deploy komutu, her seferinde aynı dağıtım adımlarını tetikler."),
+    ("Skill", "Beceri",
+     "Ajana kazandırılan, gerektiğinde devreye giren paketlenmiş bir yetenek/uzmanlık modülü.",
+     "Bir \"PDF okuma\" becerisi, ajan bir PDF gördüğünde otomatik yüklenir."),
+    ("API", "Uygulama Programlama Arayüzü",
+     "İki yazılımın birbiriyle programatik olarak konuşmasını sağlayan arayüz.",
+     "Ajan hava durumunu öğrenmek için hava servisi API'sine istek atar."),
+    ("Agent Loop", "Ajan Döngüsü",
+     "Ajanın hedefe ulaşana dek tekrarladığı algıla → düşün → eyle → değerlendir çevrimi.",
+     "Ajan her turda bir araç çağırıp sonucu değerlendirir, iş bitene dek döner."),
+    ("Orchestration", "Orkestrasyon",
+     "Birden çok ajanın/aracın görevlerini koordine edip tek bir sonuca bağlama.",
+     "Bir orkestratör, araştırma ve yazma ajanlarını sırayla çalıştırıp raporu birleştirir."),
 ]
 
 
@@ -414,6 +475,18 @@ def main():
          "> Tam açıklamalar için [`docs/`](docs/) kategori dosyalarına veya",
          "> [`seviyeler/`](seviyeler/) seviye ağacına bakın.\n",
          "---\n"]
+
+    # ---- Başlangıç sözlüğü (temel yapı taşları) ----
+    g.append("## 📌 Temel Terimler (Başlangıç Sözlüğü)\n")
+    g.append("Kategorilere geçmeden önce bilinmesi gereken temel yapı taşları. "
+             "Bazıları aşağıdaki kategorilerde daha ayrıntılı ele alınır.\n")
+    for en, tr, short, scenario in PRIMER:
+        g.append(f"### {en} — {tr}")
+        g.append(f"{short}")
+        g.append("")
+        g.append(f"🎬 **Mini senaryo:** {scenario}")
+        g.append("")
+    g.append("---\n")
 
     by_cat = {c: [] for c in CATEGORY_ORDER}
     for t in TERMS:

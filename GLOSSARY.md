@@ -9,6 +9,82 @@ Kavramlar amaç kategorilerine göre gruplanmış, her grupta seviye rozetiyle
 
 ---
 
+## 📌 Temel Terimler (Başlangıç Sözlüğü)
+
+Kategorilere geçmeden önce bilinmesi gereken temel yapı taşları. Bazıları aşağıdaki kategorilerde daha ayrıntılı ele alınır.
+
+### Agent — Ajan
+Hedefe yönelik algılayan, karar veren ve eyleme geçen özerk yapay zekâ sistemi.
+
+🎬 **Mini senaryo:** Sen hedefi söylersin; ajan adımları kendi planlayıp araçları kullanarak işi bitirir.
+
+### Model / LLM — Büyük Dil Modeli
+Metni anlayıp üreten, ajanın "beynini" oluşturan eğitilmiş büyük dil modeli.
+
+🎬 **Mini senaryo:** Ajanın düşünme kısmını yapan Claude/GPT gibi bir model çağrılır.
+
+### Prompt — İstem
+Modele ne yapması gerektiğini anlatan girdi/talimat metni.
+
+🎬 **Mini senaryo:** "Bu e-postayı kibarca reddet" bir prompt'tur.
+
+### Context — Bağlam
+Modele bir istekte sağlanan tüm bilgi: talimat, geçmiş, belgeler ve araç çıktıları.
+
+🎬 **Mini senaryo:** Ajana sistem istemi + sohbet geçmişi + ilgili belge birlikte bağlam olarak verilir.
+
+### Token — Jeton
+Modelin metni işlerken kullandığı en küçük birim; maliyet ve sınır bununla ölçülür.
+
+🎬 **Mini senaryo:** "merhaba dünya" yaklaşık 3 jetondur.
+
+### Inference — Çıkarım (Çalıştırma)
+Eğitilmiş modelin bir girdiye karşılık yanıt ürettiği çalıştırma anı.
+
+🎬 **Mini senaryo:** Her ajan adımında modele bir çıkarım çağrısı yapılır ve faturalandırılır.
+
+### Tool — Araç
+Ajanın görevini yapmak için çağırabildiği dış fonksiyon, API veya yetenek.
+
+🎬 **Mini senaryo:** "sendEmail" bir araçtır; ajan onu çağırarak e-posta gönderir.
+
+### MCP (Model Context Protocol) — Model Bağlam Protokolü
+Ajanların araçlara ve veri kaynaklarına tek tip, güvenli bir arabirimle bağlandığı açık protokol.
+
+🎬 **Mini senaryo:** Bir MCP sunucusu eklersin; ajan artık veritabanına standart şekilde erişir.
+
+### Hook — Kanca
+Belirli bir olay gerçekleştiğinde (örn. araç çağrısı öncesi/sonrası) otomatik çalışan, kullanıcı tanımlı betik/tetikleyici.
+
+🎬 **Mini senaryo:** Bir "araç öncesi" hook, ajan dosya silmeden önce çalışıp tehlikeli komutu engeller.
+
+### Command / Slash Command — Komut
+Adıyla (örn. /review) çağrılan, yeniden kullanılabilir hazır istem veya iş akışı.
+
+🎬 **Mini senaryo:** /deploy komutu, her seferinde aynı dağıtım adımlarını tetikler.
+
+### Skill — Beceri
+Ajana kazandırılan, gerektiğinde devreye giren paketlenmiş bir yetenek/uzmanlık modülü.
+
+🎬 **Mini senaryo:** Bir "PDF okuma" becerisi, ajan bir PDF gördüğünde otomatik yüklenir.
+
+### API — Uygulama Programlama Arayüzü
+İki yazılımın birbiriyle programatik olarak konuşmasını sağlayan arayüz.
+
+🎬 **Mini senaryo:** Ajan hava durumunu öğrenmek için hava servisi API'sine istek atar.
+
+### Agent Loop — Ajan Döngüsü
+Ajanın hedefe ulaşana dek tekrarladığı algıla → düşün → eyle → değerlendir çevrimi.
+
+🎬 **Mini senaryo:** Ajan her turda bir araç çağırıp sonucu değerlendirir, iş bitene dek döner.
+
+### Orchestration — Orkestrasyon
+Birden çok ajanın/aracın görevlerini koordine edip tek bir sonuca bağlama.
+
+🎬 **Mini senaryo:** Bir orkestratör, araştırma ve yazma ajanlarını sırayla çalıştırıp raporu birleştirir.
+
+---
+
 ## 1. Temeller ve Çalışma Modeli
 
 ### 🟢 Agent — Ajan
@@ -38,6 +114,13 @@ Algıla → çıkarım → eylem → değerlendir döngüsü.
 🎬 **Mini senaryo:** Ajan: kullanıcıyı dinler → cevabı düşünür → araç çağırır → sonucu görür → tekrar düşünür, hedefe ulaşana dek.
 
 <sub>↳ Ayrıntı: [`seviyeler/02-orta/agent-loop/agent-loop.md`](seviyeler/02-orta/agent-loop/agent-loop.md)</sub>
+
+### 🔵 Multimodal — Çok Kipli
+Metin, görüntü, ses gibi farklı veri türlerini birlikte işleyebilme.
+
+🎬 **Mini senaryo:** Kullanıcı bir faturanın fotoğrafını yükler; ajan görüntüyü okuyup tutarı metne döker.
+
+<sub>↳ Ayrıntı: [`seviyeler/02-orta/multimodal/multimodal.md`](seviyeler/02-orta/multimodal/multimodal.md)</sub>
 
 ### 🔵 Workflow vs Agent — İş Akışı / Ajan Ayrımı
 Sabit kodlanmış akış ile dinamik karar veren otonom ajan farkı.
@@ -239,6 +322,13 @@ Varlıkları ve ilişkilerini yapılandıran ilişkisel bellek.
 🎬 **Mini senaryo:** "Ali → yönetir → Proje X → bağlı → Departman Y" ilişkileri ajanın doğru kişiyi bulmasını sağlar.
 
 <sub>↳ Ayrıntı: [`seviyeler/03-ileri/knowledge-graph/knowledge-graph.md`](seviyeler/03-ileri/knowledge-graph/knowledge-graph.md)</sub>
+
+### 🟠 Reranking — Yeniden Sıralama
+Erişilen aday belgeleri alaka düzeyine göre yeniden sıralama.
+
+🎬 **Mini senaryo:** Vektör araması 20 belge getirir; reranker bunları puanlayıp en alakalı 3'ünü modele verir.
+
+<sub>↳ Ayrıntı: [`seviyeler/03-ileri/reranking/reranking.md`](seviyeler/03-ileri/reranking/reranking.md)</sub>
 
 ### 🟠 Semantic Memory — Anlamsal Bellek
 Genel doğruların ve konseptlerin yapılandırılmış hafızası.
@@ -568,6 +658,13 @@ Ajanın iç süreçlerini, araçlarını ve durumunu izleme yeteneği.
 🎬 **Mini senaryo:** Ajan yanlış cevap verince, geliştirici izlerden hangi aracı yanlış çağırdığını görür.
 
 <sub>↳ Ayrıntı: [`seviyeler/01-temel/observability/observability.md`](seviyeler/01-temel/observability/observability.md)</sub>
+
+### 🔵 Streaming — Akış (Streaming)
+Yanıtı tümü bitmeden, üretildikçe jeton jeton iletme.
+
+🎬 **Mini senaryo:** Ajan uzun bir raporu yazarken, kullanıcı ilk cümleleri tamamı bitmeden ekranda görmeye başlar.
+
+<sub>↳ Ayrıntı: [`seviyeler/02-orta/streaming/streaming.md`](seviyeler/02-orta/streaming/streaming.md)</sub>
 
 ### 🔵 Telemetry — Telemetri
 Otomatik toplanan log, metrik ve izleme verileri bütünü.

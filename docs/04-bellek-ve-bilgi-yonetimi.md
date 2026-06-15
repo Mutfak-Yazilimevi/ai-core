@@ -42,6 +42,11 @@ Verilerin düz metin olarak değil; nesneler (varlıklar) ve aralarındaki anlam
 ilişkiler şeklinde yapılandırılarak tutulduğu mimaridir. RAG'in mantıksal
 çıkarım doğruluğunu en üst düzeye çıkarır.
 
+## 🟠 Reranking (Yeniden Sıralama)
+RAG'de ilk erişimle gelen aday belgelerin, soruyla gerçek alaka düzeyine göre
+ikinci bir modelle yeniden puanlanıp sıralanması ve en alakalıların öne
+çıkarılmasıdır. Erişim kalitesini ve yanıt doğruluğunu belirgin biçimde artırır.
+
 ## 🔴 Semantic Caching (Semantik Ön Bellekleme)
 Sisteme gelen yeni bir talebin, kelimesi kelimesine aynı olmasa bile anlamsal
 olarak önceki taleplerle eşleştirilerek; LLM'e tekrar istek atmadan (maliyet ve

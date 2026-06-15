@@ -1,6 +1,6 @@
 # 🟠 İleri (Advanced)
 
-Bu seviyedeki 24 kavram. Her biri kendi klasöründe ayrı bir
+Bu seviyedeki 25 kavram. Her biri kendi klasöründe ayrı bir
 Markdown dosyası olarak bulunur.
 
 | Kavram | Kategori |
@@ -20,6 +20,7 @@ Markdown dosyası olarak bulunur.
 | [Paralel Yürütme (Parallel Execution)](parallel-execution/parallel-execution.md) | 6. İş Akışı ve Yürütme |
 | [Politika Katmanı (Policy Layer)](policy-layer/policy-layer.md) | 9. Güvenlik, Hizalama ve Denetim |
 | [Çıkarım Motoru (Reasoning Engine)](reasoning-engine/reasoning-engine.md) | 1. Temeller ve Çalışma Modeli |
+| [Yeniden Sıralama (Reranking)](reranking/reranking.md) | 4. Bellek ve Bilgi Yönetimi |
 | [Yönlendirme (Routing)](routing/routing.md) | 7. Çoklu Ajan ve Koordinasyon |
 | [Öz-Tutarlılık (Self-Consistency)](self-consistency/self-consistency.md) | 2. Muhakeme ve Planlama |
 | [Anlamsal Bellek (Semantic Memory)](semantic-memory/semantic-memory.md) | 4. Bellek ve Bilgi Yönetimi |

@@ -31,6 +31,11 @@ kendi adımlarına dinamik olarak karar veren gerçek otonom ajanlar (agent)
 arasındaki temel ayrımdır. Hangi problemin hangisini gerektirdiğini bilmek
 mimari kararların temelidir.
 
+## 🔵 Multimodal (Çok Kipli)
+Ajanın yalnızca metni değil; görüntü, ses, video gibi farklı veri türlerini
+(kipleri) birlikte algılayıp üretebilme yeteneğidir. Gerçek dünyadaki çeşitli
+girdileri tek bir akışta işlemeyi sağlar.
+
 ## 🟠 Autonomy Levels (Otonomi Seviyeleri)
 Bir ajanın insan müdahalesi olmadan ne ölçüde bağımsız karar alıp eylem
 yapabildiğini tanımlayan kademelendirmedir. Düşük seviyede her adım insana

@@ -14,7 +14,7 @@ Tüm terimlerin kısa açıklama + senaryo özeti için kökteki
 | Seviye | Klasör | Kavram Sayısı |
 |--------|--------|---------------|
 | 🟢 Temel (Basic) | [`01-temel/`](01-temel/) | 17 |
-| 🔵 Orta (Intermediate) | [`02-orta/`](02-orta/) | 21 |
-| 🟠 İleri (Advanced) | [`03-ileri/`](03-ileri/) | 24 |
+| 🔵 Orta (Intermediate) | [`02-orta/`](02-orta/) | 23 |
+| 🟠 İleri (Advanced) | [`03-ileri/`](03-ileri/) | 25 |
 | 🔴 Uzman (Master) | [`04-uzman/`](04-uzman/) | 14 |
 

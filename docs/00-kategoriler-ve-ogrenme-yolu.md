@@ -26,6 +26,7 @@ derecelendirir. Amaç; hangi kavramın ne işe yaradığını ve hangi sırayla
 | 🟢 | **Tokens / Tokenization** | İşleme, maliyet ve sınır birimi. |
 | 🔵 | **Agent Loop (Ajan Döngüsü)** | Algıla → çıkarım → eylem → değerlendir döngüsü. |
 | 🔵 | **Workflow vs Agent** | Sabit akış ile gerçek otonomi arasındaki ayrım. |
+| 🔵 | **Multimodal (Çok Kipli)** | Metin, görüntü, ses gibi türleri birlikte işleme. |
 | 🟠 | **Autonomy Levels (Otonomi Seviyeleri)** | Ajanın bağımsızlık derecesi. |
 | 🟠 | **Reasoning Engine (Çıkarım Motoru)** | Karar ve kural işleten bilişsel altyapı. |
 | 🔴 | **ADLC (Ajan Geliştirme Yaşam Döngüsü)** | Uçtan uca mühendislik süreci. |
@@ -71,6 +72,7 @@ derecelendirir. Amaç; hangi kavramın ne işe yaradığını ve hangi sırayla
 | 🟠 | **Episodic Memory (Bölümsel Bellek)** | Geçmiş olayları kronolojik hatırlama. |
 | 🟠 | **Semantic Memory (Anlamsal Bellek)** | Genel doğru ve konseptlerin hafızası. |
 | 🟠 | **Knowledge Graph (Bilgi Grafiği)** | Yapılandırılmış ilişkisel bellek. |
+| 🟠 | **Reranking (Yeniden Sıralama)** | Erişilen belgeleri alaka düzeyine göre yeniden sıralama. |
 | 🔴 | **Semantic Caching** | Anlamsal eşleşmeyle LLM'e gitmeden yanıt. |
 | 🔴 | **Fine-tuning / RLHF / RLAIF** | Modele kalıcı bilgi/davranış kazandırma. |
 
@@ -156,6 +158,7 @@ derecelendirir. Amaç; hangi kavramın ne işe yaradığını ve hangi sırayla
 |--------|--------|------------|
 | 🟢 | **Observability (Gözlemlenebilirlik)** | Ajanın iç süreçlerini izleme yeteneği. |
 | 🔵 | **Telemetry (Telemetri)** | Toplanan log, metrik ve izleme verileri bütünü. |
+| 🔵 | **Streaming (Akış)** | Yanıtı üretildikçe jeton jeton iletme. |
 | 🟠 | **LLMOps / AgentOps** | Ajan operasyonlarının uçtan uca disiplini. |
 
 ---

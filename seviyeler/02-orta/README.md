@@ -1,6 +1,6 @@
 # 🔵 Orta (Intermediate)
 
-Bu seviyedeki 21 kavram. Her biri kendi klasöründe ayrı bir
+Bu seviyedeki 23 kavram. Her biri kendi klasöründe ayrı bir
 Markdown dosyası olarak bulunur.
 
 | Kavram | Kategori |
@@ -17,12 +17,14 @@ Markdown dosyası olarak bulunur.
 | [En Az Yetki (Least Privilege)](least-privilege/least-privilege.md) | 9. Güvenlik, Hizalama ve Denetim |
 | [Yargıç Olarak LLM (LLM-as-a-Judge)](llm-as-a-judge/llm-as-a-judge.md) | 10. Değerlendirme ve Kalite |
 | [Model Context Protocol (MCP)](mcp/mcp.md) | 8. İletişim ve Protokoller |
+| [Çok Kipli (Multimodal)](multimodal/multimodal.md) | 1. Temeller ve Çalışma Modeli |
 | [Orkestratör (Orchestrator)](orchestrator/orchestrator.md) | 7. Çoklu Ajan ve Koordinasyon |
 | [Planla-ve-Yürüt (Plan-and-Execute)](plan-and-execute/plan-and-execute.md) | 2. Muhakeme ve Planlama |
 | [İstem Zincirleme (Prompt Chaining)](prompt-chaining/prompt-chaining.md) | 3. Bağlam ve İstem Mühendisliği |
 | [Retrieval-Augmented Generation (RAG)](rag/rag.md) | 4. Bellek ve Bilgi Yönetimi |
 | [Muhakeme + Eylem (ReAct (Reasoning + Acting))](react/react.md) | 2. Muhakeme ve Planlama |
 | [Korumalı Alan (Sandboxing)](sandboxing/sandboxing.md) | 9. Güvenlik, Hizalama ve Denetim |
+| [Akış (Streaming) (Streaming)](streaming/streaming.md) | 11. Operasyon ve Gözlemlenebilirlik |
 | [Alt Ajan (Subagent)](subagent/subagent.md) | 7. Çoklu Ajan ve Koordinasyon |
 | [Telemetri (Telemetry)](telemetry/telemetry.md) | 11. Operasyon ve Gözlemlenebilirlik |
 | [İş Akışı / Ajan Ayrımı (Workflow vs Agent)](workflow-vs-agent/workflow-vs-agent.md) | 1. Temeller ve Çalışma Modeli |
