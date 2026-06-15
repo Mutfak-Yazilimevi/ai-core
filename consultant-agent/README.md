@@ -78,8 +78,13 @@ benzeri bir iş akışı ekler. Bu iş akışı **çalışan** bir inceleyicidir
 1. Açılan/güncellenen her PR'de tetiklenir.
 2. [`src/reviewer.ts`](src/reviewer.ts) değişen dosyaların diff'ini toplar.
 3. Diff'i Claude'a gönderip **yapılandırılmış** inceleme bulguları (önem, dosya,
-   başlık, açıklama, öneri) ister.
-4. Bulguları öncelik gruplarıyla (🔴/🟠/🟡) tek bir derli toplu yorum olarak PR'a yazar.
+   **satır**, başlık, açıklama, öneri) ister.
+4. Tek bir PR incelemesi yazar: öncelik gruplarıyla (🔴/🟠/🟡) **özet gövde** +
+   geçerli satırlara **satır içi (inline) yorumlar**.
+
+> Satır içi yorumlar, modelin verdiği satır numarası diff hunk'larına karşı
+> doğrulandıktan sonra eklenir; eşleşmeyen satırlar yalnızca özette listelenir.
+> Satır içi inceleme reddedilirse (422) güvenli biçimde tek özet yorumuna düşülür.
 
 Yerelde denemek için (bir PR bağlamında):
 
