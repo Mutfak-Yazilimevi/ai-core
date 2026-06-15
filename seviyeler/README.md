@@ -7,7 +7,9 @@ Markdown dosyası olarak yer alır:
 seviyeler/<seviye>/<terim>/<terim>.md
 ```
 
-Her terim sayfası; kısa tanım, kategori ve bir **mini senaryo** içerir.
+Her terim sayfası; kısa tanım, mini senaryo ve ardından **Ayrıntılı
+Açıklama**, **Detaylı Senaryo**, **Kullanım / Uygulama Örneği** (kod) ve
+**İlgili Kavramlar** bölümlerini içerir.
 Tüm terimlerin kısa açıklama + senaryo özeti için kökteki
 [GLOSSARY.md](../GLOSSARY.md) dosyasına bakın.
 

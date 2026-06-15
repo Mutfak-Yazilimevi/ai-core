@@ -57,6 +57,6 @@ parcalar = parcala(uzun_belge, parca_boyut=500, ortusme=50)
 ## 🔗 İlgili Kavramlar
 
 - [Gömme / Vektör Veritabanı (Embeddings / Vector Database)](../embeddings-vector-db/embeddings-vector-db.md) — parçaların vektöre çevrilip saklandığı yer
-- [RAG (Retrieval-Augmented Generation)](../../01-temel/rag/rag.md) — parçalamanın hizmet ettiği temel mimari
+- [RAG (Retrieval-Augmented Generation)](../rag/rag.md) — parçalamanın hizmet ettiği temel mimari
 - [Bağlam Penceresi (Context Window)](../context-window/context-window.md) — parça boyutunu sınırlayan kapasite
 - Meta Veri (Metadata) — her parçaya eklenen kaynak/sayfa bilgisi

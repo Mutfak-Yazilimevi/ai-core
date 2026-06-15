@@ -66,7 +66,7 @@ print(next(b.text for b in resp.content if b.type == "text"))
 ## 🔗 İlgili Kavramlar
 
 - [Bağlam Penceresi (Context Window)](../context-window/context-window.md) — örneklerin sığması gereken sınır
-- [İstem Mühendisliği (Prompt Engineering)](../../01-temel/prompt-engineering/prompt-engineering.md) — örnek seçimi ve istem tasarımı
-- [Prompt Chaining (İstem Zincirleme)](../../01-temel/prompt-chaining/prompt-chaining.md) — örnek temelli adımların zincirlenmesi
+- [İstem Mühendisliği (Prompt Engineering)](../../03-ileri/context-engineering/context-engineering.md) — örnek seçimi ve istem tasarımı
+- [Prompt Chaining (İstem Zincirleme)](../prompt-chaining/prompt-chaining.md) — örnek temelli adımların zincirlenmesi
 - Few-shot / Zero-shot — örnekli ve örneksiz öğretim biçimleri
 - İnce Ayar (Fine-tuning) — kalıcı öğrenme gerektiğinde alternatif

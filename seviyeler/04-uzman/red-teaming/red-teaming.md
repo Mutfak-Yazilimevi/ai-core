@@ -82,6 +82,6 @@ def saldiri_uret(hedef: str) -> str:
 
 - [İstem Enjeksiyonu / Kısıt Aşımı (Prompt Injection / Jailbreak)](../prompt-injection-jailbreak/prompt-injection-jailbreak.md) — test edilen başlıca saldırı türleri
 - [Hizalama ve Anayasal YZ (Alignment & Constitutional AI)](../alignment-constitutional-ai/alignment-constitutional-ai.md) — sağlamlığı test edilen güvenlik katmanı
-- [Değerlendirme Setleri (Evals)](../evals/evals.md) — kırılan vakaların dönüştüğü regresyon testleri
+- [Değerlendirme Setleri (Evals)](../../01-temel/evals/evals.md) — kırılan vakaların dönüştüğü regresyon testleri
 - [Ajan Geliştirme Yaşam Döngüsü (ADLC)](../adlc/adlc.md) — yayın öncesi güvenlik aşaması
 - Tehdit Modellemesi (Threat Modeling) — saldırı hedeflerini belirleme

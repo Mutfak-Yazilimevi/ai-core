@@ -63,7 +63,7 @@ print(next(b.text for b in resp.content if b.type == "text"))
 ## 🔗 İlgili Kavramlar
 
 - [Parçalama (Chunking)](../chunking/chunking.md) — vektöre çevrilmeden önce belgeyi bölme
-- [RAG (Retrieval-Augmented Generation)](../../01-temel/rag/rag.md) — gömme + arama + üretimin birleşimi
+- [RAG (Retrieval-Augmented Generation)](../rag/rag.md) — gömme + arama + üretimin birleşimi
 - [Bağlam Penceresi (Context Window)](../context-window/context-window.md) — getirilen parçaların sığması gereken sınır
 - Benzerlik Araması (Similarity Search) — en yakın vektörleri bulma yöntemi
 - Uzun Vadeli Bellek (Long-term Memory) — ajanın bilgi sakladığı kalıcı katman

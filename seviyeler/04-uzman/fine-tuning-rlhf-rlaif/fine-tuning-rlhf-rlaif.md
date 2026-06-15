@@ -67,6 +67,6 @@ print("".join(b.text for b in resp.content if b.type == "text"))
 
 - [Hizalama ve Anayasal YZ (Alignment & Constitutional AI)](../alignment-constitutional-ai/alignment-constitutional-ai.md) — RLAIF'in dayandığı hizalama yaklaşımı
 - [Temellendirme (Grounding)](../grounding/grounding.md) — güncel bilgi için ince ayara alternatif
-- [Değerlendirme Setleri (Evals)](../evals/evals.md) — ince ayar kalitesini ölçme
+- [Değerlendirme Setleri (Evals)](../../01-temel/evals/evals.md) — ince ayar kalitesini ölçme
 - Erişimle Artırılmış Üretim (RAG) — bilgi katmak için ince ayar alternatifi
 - İstem Mühendisliği (Prompt Engineering) — daha hafif davranış yönlendirme

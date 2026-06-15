@@ -63,6 +63,6 @@ print(degerlendir(makale_metni, uretilen_ozet))
 
 - [Bağlam İçi Öğrenme (In-context Learning)](../in-context-learning/in-context-learning.md) — yargıca örnekle puanlama öğretme
 - [Döngüde İnsan (HITL)](../hitl/hitl.md) — yargıcı insan yargısıyla kalibre etme
-- [Prompt Chaining (İstem Zincirleme)](../../01-temel/prompt-chaining/prompt-chaining.md) — üret-sonra-değerlendir zinciri
+- [Prompt Chaining (İstem Zincirleme)](../prompt-chaining/prompt-chaining.md) — üret-sonra-değerlendir zinciri
 - Değerlendirme (Evals) — yargıç modelin kullanıldığı test süiti
 - Rubric (Puanlama Ölçütü) — yargıca verilen değerlendirme kriterleri

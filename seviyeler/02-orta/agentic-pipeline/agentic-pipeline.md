@@ -65,7 +65,7 @@ print(dogrulama)
 
 ## 🔗 İlgili Kavramlar
 
-- [Prompt Chaining (İstem Zincirleme)](../../01-temel/prompt-chaining/prompt-chaining.md) — boru hattının temelindeki çıktı-girdi zinciri
+- [Prompt Chaining (İstem Zincirleme)](../prompt-chaining/prompt-chaining.md) — boru hattının temelindeki çıktı-girdi zinciri
 - [Ajan Döngüsü (Agent Loop)](../agent-loop/agent-loop.md) — boru hattının açık uçlu, dinamik karşıtı
 - [Fonksiyon Çağırma (Function Calling)](../function-calling/function-calling.md) — aşamalar arası yapısal veri üretimi
 - [Devir İşlemleri (Handoffs)](../handoffs/handoffs.md) — aşamadan aşamaya kontrol aktarımı

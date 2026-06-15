@@ -62,6 +62,6 @@ else:
 
 - [Parçalama (Chunking)](../chunking/chunking.md) — belgeyi pencereye sığacak parçalara bölme
 - [Ajan Döngüsü (Agent Loop)](../agent-loop/agent-loop.md) — turlar ilerledikçe pencereyi dolduran çevrim
-- [RAG (Retrieval-Augmented Generation)](../../01-temel/rag/rag.md) — pencereye sadece alakalı bağlamı getirme
+- [RAG (Retrieval-Augmented Generation)](../rag/rag.md) — pencereye sadece alakalı bağlamı getirme
 - Token (Jeton) — pencerenin ölçüldüğü temel birim
 - Bellek Sıkıştırma (Compaction) — eski bağlamı özetleyerek pencerede yer açma

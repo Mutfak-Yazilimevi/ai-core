@@ -88,8 +88,8 @@ def izlenen_cagri(soru: str):
 
 ## 🔗 İlgili Kavramlar
 
-- [Değerlendirme Setleri (Evals)](../evals/evals.md) — ADLC'nin kalite ölçüm aşaması
-- [İzlenebilirlik (Observability)](../observability/observability.md) — canlı izleme aşaması
+- [Değerlendirme Setleri (Evals)](../../01-temel/evals/evals.md) — ADLC'nin kalite ölçüm aşaması
+- [İzlenebilirlik (Observability)](../../01-temel/observability/observability.md) — canlı izleme aşaması
 - [Bütçe / Döngü Sınırı (Budget / Loop Limits)](../budget-loop-limits/budget-loop-limits.md) — üretim güvenliği
 - [Dayanıklılık Desenleri (Caching / Retry / Circuit Breaker)](../caching-retry-circuit-breaker/caching-retry-circuit-breaker.md) — üretim kararlılığı
 - Kırmızı Takım (Red Teaming) — yayın öncesi güvenlik testi

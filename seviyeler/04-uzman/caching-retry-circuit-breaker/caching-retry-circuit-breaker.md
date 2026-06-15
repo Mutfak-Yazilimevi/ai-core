@@ -83,5 +83,5 @@ class DevreKesici:
 - [Eşetkisellik (Idempotency)](../idempotency/idempotency.md) — güvenli yeniden deneme için ön koşul
 - [Semantik Ön Bellekleme (Semantic Caching)](../semantic-caching/semantic-caching.md) — anlamsal önbellek varyantı
 - [Bütçe / Döngü Sınırı (Budget / Loop Limits)](../budget-loop-limits/budget-loop-limits.md) — yeniden deneme sayısını sınırlama
-- [İzlenebilirlik (Observability)](../observability/observability.md) — devre durumunu izleme
+- [İzlenebilirlik (Observability)](../../01-temel/observability/observability.md) — devre durumunu izleme
 - Yedeğe Geçiş (Fallback) — devre açılınca alternatif kaynak

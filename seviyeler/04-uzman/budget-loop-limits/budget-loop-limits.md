@@ -81,7 +81,7 @@ def maliyet_hesapla(usage) -> float:
 ## 🔗 İlgili Kavramlar
 
 - [Dayanıklılık Desenleri (Caching / Retry / Circuit Breaker)](../caching-retry-circuit-breaker/caching-retry-circuit-breaker.md) — döngü kesmenin tamamlayıcısı
-- [İzlenebilirlik (Observability)](../observability/observability.md) — sınıra takılma olaylarını izleme
+- [İzlenebilirlik (Observability)](../../01-temel/observability/observability.md) — sınıra takılma olaylarını izleme
 - [Ajan Geliştirme Yaşam Döngüsü (ADLC)](../adlc/adlc.md) — üretim güvenliği aşaması
 - Zaman Aşımı (Timeout) — süre tabanlı sınırın temel biçimi
 - Maliyet Optimizasyonu (Cost Optimization) — bütçe yönetiminin geniş çerçevesi
