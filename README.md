@@ -9,10 +9,15 @@ başlıkları altında derli toplu bir şekilde sunmayı amaçlar.
 
 ## İçindekiler
 
-Kavramlar altı tematik grupta toplanmıştır:
+> 🎯 **Amaca göre kategoriler + Basic→Master derecelendirme** ve önerilen öğrenme
+> sırası için: **[Kategoriler ve Öğrenme Yolu](docs/00-kategoriler-ve-ogrenme-yolu.md)**
+> (tüm kavramları 11 amaç kategorisinde 🟢→🔵→🟠→🔴 seviyeleriyle sunar).
+
+Kavramlar aşağıda tematik bölümlerde tanımlanır:
 
 | Bölüm | Başlık | Kavramlar |
 |-------|--------|-----------|
+| 0 | [Kategoriler ve Öğrenme Yolu (Basic→Master)](docs/00-kategoriler-ve-ogrenme-yolu.md) | Amaca göre 11 kategori, seviye derecelendirmesi ve öğrenme sırası |
 | 1 | [Temel Ajan ve İletişim Kavramları](docs/01-temel-ajan-ve-iletisim.md) | Agent Loop, Orchestrator, Subagent, MCP, Tool Use, A2A Protocol |
 | 2 | [Bilgi Yönetimi ve Güvenlik](docs/02-bilgi-yonetimi-ve-guvenlik.md) | Memory, RAG, Grounding, Context Engineering, System Prompt, Guardrails |
 | 3 | [İş Akışı ve Yürütme Denetimi](docs/03-is-akisi-ve-yurutme-denetimi.md) | Policy Layer, Sandboxing, HITL, Handoffs, Agentic Pipeline, Task State |
@@ -20,8 +25,10 @@ Kavramlar altı tematik grupta toplanmıştır:
 | 5 | [İleri Düzey ve İlgili Kavramlar](docs/05-ileri-duzey-ve-ilgili-kavramlar.md) | ReAct, CoT, ToT, Reflexion, Multi-Agent Debate, RAG altyapısı, Function Calling, Prompt Injection, LLM-as-a-Judge ve daha fazlası |
 | 6 | [Mimari ve Operasyonel Kavramlar](docs/06-mimari-ve-operasyonel-kavramlar.md) | ADLC, State Machine/FSM, Task Decomposition, Idempotency, Semantic Routing, Context Window, Bellek mimarisi, HOTL, LLMOps/AgentOps, Telemetry, Tokenization, Top-P/Top-K, Hallucination |
 
-> **Not:** 1–4. bölümler görseldeki **24 temel kavramı**; 5. bölüm ise
-> literatürde sık geçen **ileri düzey ve ilgili kavramları** kapsar.
+> **Not:** 1–4. bölümler görseldeki **24 temel kavramı**; 5. bölüm literatürde
+> sık geçen **ileri düzey** kavramları; 6. bölüm **mimari/operasyonel** kavramları
+> kapsar. 0. bölüm ise tüm bu kavramları **amaca göre kategorize edip
+> derecelendirir**.
 
 Hızlı arama için tüm terimlerin tek sayfalık özeti:
 [Sözlük (Glossary)](docs/sozluk.md)
