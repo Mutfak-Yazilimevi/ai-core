@@ -1,12 +1,28 @@
 # ai-core
 
-**Agentic AI (Otonom Yapay Zekâ Ajanları)** dünyasının temel yapı taşlarını
-oluşturan kavramların Türkçe referans kılavuzu.
+Bu depo iki bölümden oluşur:
 
-Bu depo, otonom yapay zekâ ajanları geliştirirken karşılaşılan kavramları
-**amaçlarına göre 11 kategoriye** ayırır ve her kategori içinde
-**🟢 Temel → 🔵 Orta → 🟠 İleri → 🔴 Uzman** olarak derecelendirir. Böylece
-hem bir sözlük hem de bir öğrenme yol haritası işlevi görür.
+1. **📚 Kavram Referansı** — **Agentic AI (Otonom Yapay Zekâ Ajanları)** dünyasının
+   temel yapı taşlarını oluşturan kavramların Türkçe kılavuzu; kavramları
+   **amaçlarına göre 11 kategoriye** ayırır ve her kategori içinde
+   **🟢 Temel → 🔵 Orta → 🟠 İleri → 🔴 Uzman** olarak derecelendirir. Böylece
+   hem bir sözlük hem de bir öğrenme yol haritası işlevi görür.
+2. **🤖 Uygulama** — Bu kavramları hayata geçiren, **sunucusuz** çalışan bir
+   örnek ajan: [AI SDLC Dönüşüm Danışmanı](consultant-agent/) (GitHub Actions + Issues).
+
+## Depo Yapısı
+
+```
+ai-core/
+├── docs/             # Kavramların kategori bazlı, seviye sıralı açıklamaları
+├── seviyeler/        # Aynı kavramlar, seviye → terim → terim.md ağacı olarak
+├── scripts/          # GLOSSARY.md ve seviyeler/ ağacını üreten betik
+├── GLOSSARY.md       # Tüm terimler: kısa açıklama + mini senaryo
+├── consultant-agent/ # 🤖 Uygulama: sunucusuz AI SDLC Dönüşüm Danışmanı
+└── .github/          # Danışman ajanın iş akışı + Issue şablonu
+```
+
+# 📚 Bölüm 1 — Kavram Referansı
 
 ## 🎯 Başlangıç Noktası
 
@@ -65,7 +81,42 @@ yeni terim eklerken betikteki listeye ekleyip yeniden çalıştırman yeterlidir
 4. **🔴 Uzman seviyeyle kurumsallaştır** — ADLC, Idempotency, State Machine,
    Swarm, Constitutional AI ve LLMOps ile dağıtık/üretim mimarisine geç.
 
-## Katkı
+# 🤖 Bölüm 2 — Uygulama: AI SDLC Dönüşüm Danışmanı
+
+Kavram referansının pratiğe döküldüğü, **sunucusuz (serverless)** bir danışman
+ajan. Sunucu, Redis veya harici barındırma olmadan; yalnızca **GitHub Issues +
+GitHub Actions + Node.js/TypeScript** ile çalışır. Müşteri bir Issue açar, ajan
+yorumlarla yanıt verir; tüm durum ve hafıza GitHub'ın kendi yapıtaşlarında tutulur.
+
+| Katman | Teknoloji | İlgili kavram |
+|--------|-----------|----------------|
+| Sohbet arayüzü | GitHub Issues (yorumlar) | — |
+| Orkestrasyon | GitHub Actions içinde anlık Node.js/TS (Octokit) | Agent Loop, Orchestrator |
+| Durum yönetimi | GitHub Labels (`state:*`) | State Machine / Task State |
+| Hafıza | Issue yorum geçmişi (son 10 yorum) | Memory |
+| LLM | Resmi Anthropic SDK, `claude-opus-4-8` (adaptif düşünme) | Foundation Model, Reasoning |
+| Beceri (skill) | `create_pilot_workflow` aracı | Tool Use |
+
+**Sohbet akışı (durum makinesi):**
+
+```
+Issue açılır → state:discovery   (karşılama + kültür tespiti)
+   yorum ────→ state:bottleneck  (darboğaz analizi)
+   yorum ────→ state:metrics     (ROI için sayısal metrikler)
+   yorum ────→ state:proposal_ready (ROI tablosu + teklif → Issue kapanır)
+   yorum ────→ (pilot onayı) → create_pilot_workflow aracı
+```
+
+**Pilot: AI Kod İnceleme Ajanı.** Müşteri pilotu onaylayınca ajan repoya çalışan
+bir `pull_request` iş akışı ekler. Bu inceleyici, açılan PR'lerin diff'ini Claude
+ile inceleyip bulguları **özet gövde + geçerli satırlara satır içi (inline) yorumlar**
+olarak yazar; satır eşleştirme reddedilirse güvenle tek özet yorumuna düşer.
+
+**Kurulum (özet):** Repo Settings → Secrets → **`LLM_API_KEY`** (Anthropic API
+anahtarı) ekleyin; Issues etkin olsun. Ayrıntılar ve dosya yapısı için:
+**[`consultant-agent/README.md`](consultant-agent/README.md)**
+
+# Katkı
 
 Yeni kavram eklemek veya açıklamaları geliştirmek için ilgili kategori dosyasını
 düzenleyin; kavramı doğru **amaç kategorisine** ve doğru **seviyeye** (🟢/🔵/🟠/🔴)
