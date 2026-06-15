@@ -60,6 +60,12 @@ Hangi yöntem size uyuyorsa onunla başlayın:
 yapay zekâ destekli yazılım geliştirme dönüşümünü anlatan bir ajandır. Sunucu
 gerektirmez; tamamen **GitHub Issues** üzerinden sohbet eder.
 
+> **👉 Danışman ajanı:** Sohbeti başlatmak için:
+> **<https://github.com/Mutfak-Yazilimevi/ai-core/issues/new?template=consultant-request.yml>**
+>
+> _(Kendi kopyanızda çalıştırıyorsanız bu adres `…/<kullanıcı-adınız>/ai-core/…`
+> biçiminde olacaktır.)_
+
 ### Ne yapar?
 
 - Firmanızın kültürünü ve yazılım sürecindeki **darboğazları** anlamak için birkaç soru sorar.
@@ -77,11 +83,36 @@ gerektirmez; tamamen **GitHub Issues** üzerinden sohbet eder.
 4. **Pilotu deneyin (opsiyonel):** "Pilotu ekleyin" diye yanıt verin; ajan reponuza
    kod inceleme iş akışını ekler. Sonraki PR'lerinizde otomatik inceleme yorumları başlar.
 
-### Kullanmadan önce (repo sahibi için tek seferlik)
+### Kendi API anahtarınızla çalıştırın
 
-- **Anthropic API anahtarı ekleyin:** Repo → **Settings → Secrets and variables →
-  Actions** → `LLM_API_KEY` adıyla anahtarınızı kaydedin.
-- **Issues etkin olsun:** Repo → Settings → Issues açık olmalı.
+Ajan, yapay zekâ modeline erişmek için bir **Anthropic API anahtarı** kullanır.
+Bu anahtar her kullanıcının **kendisine aittir** — kimseyle paylaşılmaz ve
+faturalandırma sizin hesabınız üzerinden işler. Ajanı kendi kopyanızda çalıştırmak
+için aşağıdaki üç adımı izleyin:
+
+**1) Bu depoyu kendi hesabınıza kopyalayın**
+GitHub'da sağ üstteki **Fork** düğmesine basın (veya **Use this template**).
+Artık ajan sizin reponuzda, sizin denetiminizde çalışır.
+
+**2) Anthropic API anahtarınızı alın**
+- <https://console.anthropic.com> adresine gidin ve giriş yapın (hesabınız yoksa oluşturun).
+- Sol menüden **API Keys** → **Create Key** ile yeni bir anahtar üretin.
+- Anahtarı (`sk-ant-...` ile başlar) kopyalayın. **Bu anahtar yalnızca bir kez gösterilir.**
+- Anahtar kullanımı Anthropic tarafından kullandığınız kadar ücretlendirilir; ayrıntılar
+  ve fiyatlandırma için <https://www.anthropic.com/pricing>.
+
+**3) Anahtarı reponuza gizli (secret) olarak ekleyin**
+- Forkladığınız repoda **Settings → Secrets and variables → Actions** sayfasını açın.
+- **New repository secret** düğmesine basın.
+- **Name:** `LLM_API_KEY` &nbsp;|&nbsp; **Secret:** kopyaladığınız `sk-ant-...` anahtarı.
+- **Add secret** ile kaydedin.
+
+> 🔒 GitHub secret'ları şifrelenir; loglarda veya kod içinde görünmez. Anahtarı
+> asla doğrudan dosyalara yazmayın.
+
+Ayrıca reponuzda **Issues** özelliğinin açık olduğundan emin olun
+(Settings → General → Features → Issues). Hepsi bu kadar — artık yukarıdaki
+"Nasıl kullanılır?" adımlarıyla kendi danışmanınızla sohbet edebilirsiniz.
 
 > Teknik ayrıntılar, mimari ve yerelde geliştirme için:
 > **[`consultant-agent/README.md`](consultant-agent/README.md)**
