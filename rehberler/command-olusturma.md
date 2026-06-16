@@ -97,6 +97,16 @@ Yukarıdaki çıktıyı özetle: kaç test geçti/kaldı, başarısızların ola
 5. **Aynı ada sahip Skill, legacy komutun önüne geçer.** İkisi birden varsa Skill
    kazanır.
 
+## ⚖️ Kazanımlar ve Kayıplar
+
+| Durum | Kazanım | Kayıp / Risk |
+|-------|---------|--------------|
+| **Kullanırsan** | Hızlı tekrar tetikleme; ekip içi standart iş akışı; argümanlı parametreleme; `/` menüsünde keşfedilebilir. | Komutlar çoğalınca menü kalabalıklaşır; legacy ile Skill biçimi karışabilir; bakım gerektirir. |
+| **Kullanmazsan** | Sıfır kurulum. | Uzun istemleri her seferinde elle yazarsın (zaman + tutarsızlık); ekip farklı yapar; yeni üyeye öğretme yükü. |
+
+**Denge:** Birden çok kez tekrarlanan, parametre alan istemler için komut/skill;
+tek seferlik istekler için düz yazı yeterli.
+
 ## İlgili rehberler
 
 - [Skill Oluşturma](skill-olusturma.md) — `/ad`'in modern, önerilen biçimi

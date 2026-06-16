@@ -110,6 +110,16 @@ claude mcp remove <ad>     # kaldır
 5. **Sırları koda gömmeyin.** Token'ları ortam değişkeni + `allowedEnvVars` ya da
    OAuth ile yönetin; `.mcp.json` repoya gidiyorsa içine düz token yazmayın.
 
+## ⚖️ Kazanımlar ve Kayıplar
+
+| Durum | Kazanım | Kayıp / Risk |
+|-------|---------|--------------|
+| **Kullanırsan** | Dış sistemlere standart, güvenli, yeniden kullanılabilir erişim; özel kod yazmadan entegrasyon; OAuth/vault ile sır yönetimi. | Başlangıç gecikmesi/timeout; ek bağımlılık ve işletim yükü; üçüncü taraf sunucu güven sınırı (yalnızca güvenilenlere bağlan). |
+| **Kullanmazsan** | Daha az hareketli parça; daha küçük saldırı yüzeyi. | Ajan dış veriye erişemez (elle kopyala-yapıştır); her entegrasyon için özel kod; tutarsız/güvensiz erişim. |
+
+**Denge:** Tekrar eden, gerçek dış erişim gerektiren entegrasyonlar için MCP;
+tek seferlik veriyi elle bağlama vermek daha basittir.
+
 ## İlgili rehberler
 
 - [Hook Oluşturma](hook-olusturma.md) — `type: "mcp_tool"` hook'u bir MCP aracını çağırır

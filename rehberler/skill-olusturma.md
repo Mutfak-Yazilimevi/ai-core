@@ -104,6 +104,16 @@ arguments: [bilesen, kaynak, hedef]
 5. **Kapsam önceliği:** Kurumsal > Kişisel > Proje. Aynı ada sahip Skill, eski
    `commands/` komutunun önüne geçer.
 
+## ⚖️ Kazanımlar ve Kayıplar
+
+| Durum | Kazanım | Kayıp / Risk |
+|-------|---------|--------------|
+| **Kullanırsan** | Tekrar eden talimatları tek kaynakta toplar; yalnızca gerektiğinde yüklenir (token tasarrufu); tutarlı çıktı; ekiple paylaşılır; otomatik tetiklenebilir. | Kötü `description` yanlış tetikler; çağrıldıktan sonra içerik oturum boyu bağlamda kalır (çok büyük skill bağlamı şişirir); bakım gerektirir. |
+| **Kullanmazsan** | Sıfır kurulum/bakım; en yalın başlangıç. | Aynı yönergeleri her seferinde elle yapıştırırsın (zaman + tutarsızlık) ya da `CLAUDE.md`'ye koyup her oturumda bağlamı şişirirsin; bilgi kişiden kişiye değişir. |
+
+**Denge:** Sık tekrarlanan, çok adımlı işler için skill; tek seferlik veya çok kısa
+işler için düz istem yeterli.
+
 ## İlgili rehberler
 
 - [Slash Command Oluşturma](command-olusturma.md) — `/ad` ile çağırmanın diğer biçimi

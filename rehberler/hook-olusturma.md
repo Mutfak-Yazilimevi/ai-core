@@ -125,6 +125,16 @@ exit 0
 5. **Öncelik:** kurumsal > kullanıcı > proje; eşleşen tüm kapsamlar çalışır.
    Commit'lenmeyecek yerel kurallar için `.claude/settings.local.json` kullanın.
 
+## ⚖️ Kazanımlar ve Kayıplar
+
+| Durum | Kazanım | Kayıp / Risk |
+|-------|---------|--------------|
+| **Kullanırsan** | Deterministik garanti (modelin keyfine bağlı değil); güvenlik bariyeri; otomatik format/lint/bağlam enjeksiyonu; denetlenebilir ve tutarlı. | Yanlış yazılmış hook iş akışını engeller/yavaşlatır; bakım + kabuk/`jq` bağımlılığı; hata ayıklaması zor olabilir. |
+| **Kullanmazsan** | Kurulum/bakım yok; tam esneklik. | Kritik kural modele veya insana bağlı kalır (atlanabilir/unutulur); tehlikeli işlemler geçebilir; manuel tekrar + insan hatası. |
+
+**Denge:** "Asla olmamalı / her seferinde olmalı" türü garanti gereken kurallar için
+hook; esnek, duruma göre değişen davranış için sistem istemi/skill daha uygundur.
+
 ## İlgili rehberler
 
 - [Skill Oluşturma](skill-olusturma.md) — skill yaşam döngüsüne bağlı `hooks` alanı

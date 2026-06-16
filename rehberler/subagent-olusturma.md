@@ -74,6 +74,16 @@ Asla kod değiştirme; yalnızca araştır ve raporla.
 5. **Alt ajanlar alt ajan açabilir** (ön planda her derinlikte; arka planda ~5
    seviyeye kadar). Her seviye kendi izole bağlamına sahiptir.
 
+## ⚖️ Kazanımlar ve Kayıplar
+
+| Durum | Kazanım | Kayıp / Risk |
+|-------|---------|--------------|
+| **Kullanırsan** | Ana bağlam temiz kalır; paralel iş kolları; role özel araç/model/yetki; uzun aramalar özetlenerek döner. | Ayrı tur olduğu için ek gecikme/jeton; zayıf `description` → delege edilmez; aşırı kullanımda koordinasyon karmaşası. |
+| **Kullanmazsan** | Tek bağlam, basit akış, daha az gecikme. | Yan görev logları ana bağlamı şişirir, pencere erken kompaktlanır; paralellik yok; her şey tek rol/araç setiyle yürür. |
+
+**Denge:** Bağlamı kirletecek, bağımsız ve ana akışta tekrar gerekmeyecek yan
+görevleri alt ajana ver; küçük, akışın parçası işleri ana ajanda tut.
+
 ## İlgili rehberler
 
 - [Skill Oluşturma](skill-olusturma.md) — `context: fork` ile bir skill'i alt ajanda çalıştırma

@@ -31,8 +31,9 @@ Hangi yöntem size uyuyorsa onunla başlayın:
 - **Konuya göre derinleşme** → aşağıdaki kategori sayfaları.
 
 - **Yapıtaşı oluşturma rehberleri** → **[🛠️ rehberler/](rehberler/)**
-  Skill, Subagent, Hook, Slash Command ve MCP'yi Claude Code üzerinde **nasıl
-  oluşturacağınızı** amaç, kurallar ve çalışan örneklerle anlatır.
+  CLAUDE.md, Settings & İzinler, Skill, Subagent, Hook, Slash Command, MCP ve
+  Plugin'i Claude Code üzerinde **nasıl oluşturacağınızı** amaç, kurallar, çalışan
+  örnekler ve **kullanma/kullanmama kazanım-kayıp** karşılaştırmalarıyla anlatır.
 
 ### Kategoriler
 
