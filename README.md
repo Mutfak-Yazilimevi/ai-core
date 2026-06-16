@@ -24,6 +24,10 @@ Hangi yöntem size uyuyorsa onunla başlayın:
   Tüm kavramlar amaçlarına göre 11 kategoride ve **🟢 Temel → 🔵 Orta → 🟠 İleri
   → 🔴 Uzman** sırasında. Nereden başlayacağınızı bilmiyorsanız buradan girin.
 
+- **Derinlemesine terim sayfaları** → her terimin kendi sayfasında **ayrıntılı
+  açıklama**, **detaylı senaryo**, **kullanım/uygulama örneği (kod)** ve **ilgili
+  kavramlar** bulunur. Bir kavramı uygulamaya dökecekseniz buraya bakın.
+
 - **Konuya göre derinleşme** → aşağıdaki kategori sayfaları.
 
 ### Kategoriler
@@ -42,7 +46,8 @@ Hangi yöntem size uyuyorsa onunla başlayın:
 | 10 | [Değerlendirme ve Kalite](docs/10-degerlendirme-ve-kalite.md) | Ajanın performansını ölçmek |
 | 11 | [Operasyon ve Gözlemlenebilirlik](docs/11-operasyon-ve-gozlemlenebilirlik.md) | Ajanı canlıda ayakta tutmak ve izlemek |
 
-> Her kavramı kendi sayfasında, seviye seviye de inceleyebilirsiniz:
+> Her kavramı kendi ayrıntılı sayfasında, seviye seviye inceleyebilirsiniz
+> (her sayfa: tanım + mini senaryo + ayrıntılı açıklama + detaylı senaryo + kod örneği):
 > 🟢 [Temel](seviyeler/01-temel/) · 🔵 [Orta](seviyeler/02-orta/) · 🟠 [İleri](seviyeler/03-ileri/) · 🔴 [Uzman](seviyeler/04-uzman/)
 
 ### Önerilen öğrenme sırası
