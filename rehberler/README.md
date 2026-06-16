@@ -8,6 +8,11 @@ dosya konumları ve çalışan örneklerle.
 > [GLOSSARY](../GLOSSARY.md) → "Temel Terimler" bölümüne bakın. Buradaki sayfalar
 > ise "nasıl kurulur" odaklıdır.
 
+> ℹ️ **Not:** Bu rehberler, sağlayıcıdan bağımsız Agentic AI kavramlarının
+> **Claude Code'a özgü uygulamasıdır**. Aynı kavramlar (skill/iş akışı, ajan,
+> olay kancası, komut/şablon, araç bağlama) başka platform veya çerçevelerle de
+> kurulabilir; **MCP** ise sağlayıcıdan bağımsız bir açık standarttır.
+
 ## Rehberler
 
 **Olmazsa olmaz temel yapıtaşları:**

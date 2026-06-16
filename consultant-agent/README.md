@@ -12,8 +12,14 @@ kurulum gerektirmez — tamamen **GitHub Issues** üzerinden sohbet eder.
 
 ## Ne yapar?
 
-Tek tip bir "AI'a geçin" tavsiyesi vermez. Sizi **dinler**, koşullarınıza göre
-sorularını **derinleştirir** ve şunları içeren gerçekçi bir rapor üretir:
+Tek tip bir "AI'a geçin" tavsiyesi vermez ve **belirli bir markaya bağlı kalmaz**.
+Önerileri **sağlayıcıdan bağımsızdır** (vendor-agnostic): yönetilen bulut LLM'leri,
+özel bulut/VPC içi barındırma veya **self-hosted açık kaynak** modeller arasından
+sizin verinize, maliyetinize ve uyumluluğunuza uygun olanı **dengeli seçeneklerle**
+sunar; satın-alma bağımlılığını (lock-in) azaltacak açık standartlar önerir.
+
+Sizi **dinler**, koşullarınıza göre sorularını **derinleştirir** ve şunları içeren
+gerçekçi bir rapor üretir:
 
 - **Mevcut durumunuz** — hangi olgunluk seviyesindesiniz (0–5).
 - **Önerilen hedef seviye** — mantıken nereye ulaşmalısınız ve **neden daha
@@ -24,6 +30,9 @@ sorularını **derinleştirir** ve şunları içeren gerçekçi bir rapor üreti
   Evals…), başarı ölçütü ve yaklaşık süre.
 - **Size özel öneri** — ör. _"Size Skill + Agent yeterli, tam ADLC gerekmez"_ veya
   _"SDLC'den ADLC'ye şu adımlarla geçmelisiniz"_.
+- **Güvenlik & uyumluluk** — veri koruma, en az yetki, izolasyon, prompt injection
+  savunması, insan onayı (HITL), denetim/loglama ve ilgili çerçeveler (KVKK/GDPR,
+  ISO 27001, SOC 2…). Her fazın kendi güvenlik kontrolleriyle birlikte.
 - **ROI / etki tahmini**, **riskler & önlemler** ve **bu hafta atılacak ilk adım**.
 
 ### Olgunluk seviyeleri (kullanılan çerçeve)
@@ -77,6 +86,10 @@ beyin **GitHub Actions içinde anlık çalışan Node.js/TypeScript** betiğiyle
 | Durum makinesi | `state:discovery` → `state:assessing` → `state:report_ready` |
 | Hafıza | Issue yorum geçmişi (son 10 yorum) |
 | LLM | Resmi Anthropic SDK, model `claude-opus-4-8` (adaptif düşünme) |
+
+> ℹ️ Claude burada yalnızca uygulamanın **çalışma motorudur** (implementasyon
+> detayı). Ajanın müşteriye verdiği teknoloji önerileri **sağlayıcıdan bağımsızdır**;
+> motoru dilediğiniz başka bir model/sağlayıcıyla değiştirebilirsiniz.
 
 Akış: ajan `discovery` fazında karşılar; `assessing` fazında **uyarlanabilir**
 sorular sorar ve yeterli bilgi toplanınca `submit_report` aracıyla raporu teslim

@@ -66,9 +66,11 @@ Hangi yöntem size uyuyorsa onunla başlayın:
 
 ## 🤖 Danışman ajanı deneyin
 
-Öğrendiklerinizin çalışan hâlini görün: **AI SDLC Dönüşüm Danışmanı**, firmanıza
-yapay zekâ destekli yazılım geliştirme dönüşümünü anlatan bir ajandır. Sunucu
-gerektirmez; tamamen **GitHub Issues** üzerinden sohbet eder.
+Öğrendiklerinizin çalışan hâlini görün: **AI Benimseme & SDLC→ADLC Dönüşüm
+Danışmanı**, firmanızın yapay zekâyı **ne ölçüde ve nasıl** benimsemesi gerektiğini
+**sağlayıcıdan bağımsız** biçimde analiz edip size özel bir **olgunluk değerlendirmesi
+ve geçiş yol haritası** çıkarır. Sunucu gerektirmez; tamamen **GitHub Issues**
+üzerinden sohbet eder.
 
 > **👉 Danışman ajanı:** Sohbeti başlatmak için:
 > **<https://github.com/Mutfak-Yazilimevi/ai-core/issues/new?template=consultant-request.yml>**
@@ -78,18 +80,25 @@ gerektirmez; tamamen **GitHub Issues** üzerinden sohbet eder.
 
 ### Ne yapar?
 
-- Firmanızın kültürünü ve yazılım sürecindeki **darboğazları** anlamak için birkaç soru sorar.
-- Verdiğiniz bilgilerle bir **ROI (Yatırım Getirisi) tablosu** ve **dönüşüm teklifi** üretir.
+- Koşullarınıza göre **uyarlanan** sorular sorar; tek tip tavsiye vermez.
+- **Mevcut olgunluk seviyenizi (0–5)**, mantıken ulaşmanız gereken **hedef seviyeyi**,
+  **otonomi derecesini** (tam/kısmi, HITL/HOTL), **geçiş hızını** (kademeli/doğrudan)
+  ve **fazlı yol haritasını** içeren bir rapor üretir.
+- Önerileri **sağlayıcıdan bağımsızdır** (yönetilen bulut / özel bulut / self-hosted
+  açık kaynak seçeneklerini dengeli sunar; lock-in'i azaltır).
+- **Güvenlik & uyumluluğu** birinci sınıf ele alır (veri koruma, en az yetki,
+  izolasyon, prompt injection savunması, HITL, denetim/loglama, KVKK/GDPR, ISO 27001…).
 - İsterseniz reponuza, açtığınız Pull Request'leri otomatik inceleyen bir
   **pilot AI Kod İnceleme Ajanı** ekler.
 
 ### Nasıl kullanılır? (4 adım)
 
-1. **Talebi başlatın:** Repoda **Issues → New issue → "Yeni Danışmanlık Talebi"**
-   şablonunu seçip kısa hedefinizi yazın.
-2. **Sohbet edin:** Ajan yorumlarla yanıt verir. Sırasıyla kültürünüzü, darboğazlarınızı
-   ve birkaç metriği (ekip büyüklüğü, inceleme süresi, sürüm sıklığı) sorar — siz yanıtlarsınız.
-3. **Teklifinizi alın:** Ajan, ROI tablosu ve aşamalı dönüşüm teklifini son yorum olarak ekler.
+1. **Talebi başlatın:** Yukarıdaki bağlantıdan **"Yeni Danışmanlık Talebi"**
+   şablonunu doldurun (sektör, regülasyon, ekip büyüklüğü, mevcut AI kullanımı, hedef).
+2. **Sohbet edin:** Ajan, yanıtlarınıza göre derinleşen sorular sorar (olgunluk,
+   veri hassasiyeti, darboğazlar, risk iştahı, dağıtım tercihi) — siz yanıtlarsınız.
+3. **Raporunuzu alın:** Yeterli bilgi toplanınca ajan, kişiye özel **AI Benimseme
+   Analizi & Yol Haritası** raporunu son yorum olarak ekler ve talebi kapatır.
 4. **Pilotu deneyin (opsiyonel):** "Pilotu ekleyin" diye yanıt verin; ajan reponuza
    kod inceleme iş akışını ekler. Sonraki PR'lerinizde otomatik inceleme yorumları başlar.
 

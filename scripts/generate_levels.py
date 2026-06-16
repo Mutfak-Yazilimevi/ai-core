@@ -444,6 +444,8 @@ def main():
              "**İlgili Kavramlar** bölümlerini içerir.",
              "Tüm terimlerin kısa açıklama + senaryo özeti için kökteki",
              "[GLOSSARY.md](../GLOSSARY.md) dosyasına bakın.\n",
+             "> ℹ️ Kavramlar sağlayıcıdan bağımsızdır; kod örnekleri örnek olarak",
+             "> Anthropic SDK ile verilmiştir, başka sağlayıcı/çerçevelerle de kurulabilir.\n",
              "| Seviye | Klasör | Kavram Sayısı |",
              "|--------|--------|---------------|"]
     for key in ["temel", "orta", "ileri", "uzman"]:
@@ -487,6 +489,9 @@ def main():
          "(🟢 Temel · 🔵 Orta · 🟠 İleri · 🔴 Uzman) sıralanmıştır.\n",
          "> Tam açıklamalar için [`docs/`](docs/) kategori dosyalarına veya",
          "> [`seviyeler/`](seviyeler/) seviye ağacına bakın.\n",
+         "> ℹ️ Kavramlar **sağlayıcıdan bağımsızdır**. Kod örneklerinde örnek olarak",
+         "> Anthropic SDK ve `claude-opus-4-8` kullanılır; aynı desenler başka",
+         "> sağlayıcılar/çerçeveler ya da self-hosted açık kaynak modellerle de kurulabilir.\n",
          "---\n"]
 
     # ---- Başlangıç sözlüğü (temel yapı taşları) ----
