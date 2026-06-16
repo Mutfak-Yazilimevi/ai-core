@@ -87,6 +87,10 @@ beyin **GitHub Actions içinde anlık çalışan Node.js/TypeScript** betiğiyle
 | Hafıza | Issue yorum geçmişi (son 10 yorum) |
 | LLM | Resmi Anthropic SDK, model `claude-opus-4-8` (adaptif düşünme) |
 
+> ℹ️ Claude burada yalnızca uygulamanın **çalışma motorudur** (implementasyon
+> detayı). Ajanın müşteriye verdiği teknoloji önerileri **sağlayıcıdan bağımsızdır**;
+> motoru dilediğiniz başka bir model/sağlayıcıyla değiştirebilirsiniz.
+
 Akış: ajan `discovery` fazında karşılar; `assessing` fazında **uyarlanabilir**
 sorular sorar ve yeterli bilgi toplanınca `submit_report` aracıyla raporu teslim
 edip Issue'yu kapatır; `report_ready` fazında pilotu kurar.

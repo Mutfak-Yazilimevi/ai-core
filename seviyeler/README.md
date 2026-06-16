@@ -13,6 +13,9 @@ Açıklama**, **Detaylı Senaryo**, **Kullanım / Uygulama Örneği** (kod) ve
 Tüm terimlerin kısa açıklama + senaryo özeti için kökteki
 [GLOSSARY.md](../GLOSSARY.md) dosyasına bakın.
 
+> ℹ️ Kavramlar sağlayıcıdan bağımsızdır; kod örnekleri örnek olarak
+> Anthropic SDK ile verilmiştir, başka sağlayıcı/çerçevelerle de kurulabilir.
+
 | Seviye | Klasör | Kavram Sayısı |
 |--------|--------|---------------|
 | 🟢 Temel (Basic) | [`01-temel/`](01-temel/) | 17 |

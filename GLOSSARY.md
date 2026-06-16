@@ -7,6 +7,10 @@ Kavramlar amaç kategorilerine göre gruplanmış, her grupta seviye rozetiyle
 > Tam açıklamalar için [`docs/`](docs/) kategori dosyalarına veya
 > [`seviyeler/`](seviyeler/) seviye ağacına bakın.
 
+> ℹ️ Kavramlar **sağlayıcıdan bağımsızdır**. Kod örneklerinde örnek olarak
+> Anthropic SDK ve `claude-opus-4-8` kullanılır; aynı desenler başka
+> sağlayıcılar/çerçeveler ya da self-hosted açık kaynak modellerle de kurulabilir.
+
 ---
 
 ## 📌 Temel Terimler (Başlangıç Sözlüğü)
