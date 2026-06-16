@@ -30,6 +30,9 @@ gerçekçi bir rapor üretir:
   Evals…), başarı ölçütü ve yaklaşık süre.
 - **Size özel öneri** — ör. _"Size Skill + Agent yeterli, tam ADLC gerekmez"_ veya
   _"SDLC'den ADLC'ye şu adımlarla geçmelisiniz"_.
+- **Güvenlik & uyumluluk** — veri koruma, en az yetki, izolasyon, prompt injection
+  savunması, insan onayı (HITL), denetim/loglama ve ilgili çerçeveler (KVKK/GDPR,
+  ISO 27001, SOC 2…). Her fazın kendi güvenlik kontrolleriyle birlikte.
 - **ROI / etki tahmini**, **riskler & önlemler** ve **bu hafta atılacak ilk adım**.
 
 ### Olgunluk seviyeleri (kullanılan çerçeve)
