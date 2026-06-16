@@ -24,6 +24,12 @@ export interface RunOptions {
   system: string;
   messages: ChatMessage[];
   tools?: ToolHandler[];
+  /**
+   * Bu araçlardan biri çağrıldığında, sonucu işlenip döngü HEMEN sonlandırılır
+   * (modelin ek bir tur üretmesi beklenmez). Nihai çıktıyı bir araçla teslim
+   * eden akışlar (ör. submit_report) için kullanılır.
+   */
+  terminalTools?: string[];
 }
 
 /**
@@ -34,6 +40,7 @@ export interface RunOptions {
 export async function runConsultant(opts: RunOptions): Promise<string> {
   const handlers = new Map((opts.tools ?? []).map((t) => [t.tool.name, t]));
   const toolDefs = (opts.tools ?? []).map((t) => t.tool);
+  const terminalSet = new Set(opts.terminalTools ?? []);
 
   const messages: Anthropic.MessageParam[] = opts.messages.map((m) => ({
     role: m.role,
@@ -57,6 +64,7 @@ export async function runConsultant(opts: RunOptions): Promise<string> {
       messages.push({ role: "assistant", content: res.content });
 
       const toolResults: Anthropic.ToolResultBlockParam[] = [];
+      let terminal = false;
       for (const block of res.content) {
         if (block.type === "tool_use") {
           const handler = handlers.get(block.name);
@@ -73,8 +81,12 @@ export async function runConsultant(opts: RunOptions): Promise<string> {
             tool_use_id: block.id,
             content: output,
           });
+          if (terminalSet.has(block.name)) terminal = true;
         }
       }
+      // Terminal araç çağrıldıysa çıktı bir yan etkiyle (handler) yakalandı;
+      // döngüyü hemen bitir.
+      if (terminal) return extractText(res);
       messages.push({ role: "user", content: toolResults });
       continue;
     }
