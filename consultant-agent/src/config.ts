@@ -14,5 +14,5 @@ export const STATE_PREFIX = "state:";
 /** Bu ajanın yöneteceği konuları işaretleyen etiket. */
 export const CONSULTANT_LABEL = "consultant";
 
-/** Tek bir LLM yanıtı için üst sınır (jeton). */
-export const MAX_TOKENS = 8000;
+/** Tek bir LLM yanıtı için üst sınır (jeton). Kapsamlı rapor için geniş tutulur. */
+export const MAX_TOKENS = 12000;

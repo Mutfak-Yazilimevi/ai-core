@@ -1,26 +1,57 @@
 name: "Yeni Danışmanlık Talebi"
-description: "AI destekli SDLC dönüşümü için danışman ajanla sohbet başlatın."
-title: "[Danışmanlık] Firmanız için AI SDLC dönüşümü"
+description: "Firmanızın AI'ı ne ölçüde benimsemesi gerektiğini analiz edip size özel bir yol haritası çıkaralım."
+title: "[Danışmanlık] AI Benimseme Analizi & Yol Haritası"
 labels: ["consultant"]
 body:
   - type: markdown
     attributes:
       value: |
-        ## AI SDLC Dönüşüm Danışmanı
-        Bu talebi açtığınızda otonom danışman ajan size yorumlarla yanıt verecek.
-        Aşağıdaki alanları doldurmanız yeterli; gerisini sohbet üzerinden ilerleteceğiz.
+        ## AI Benimseme & SDLC→ADLC Dönüşüm Danışmanı
+        Bu talebi açtığınızda otonom danışman ajan size yorumlarla yanıt verir.
+        Birkaç uyarlanabilir soru sorar; sonunda **mevcut durumunuzu, önerilen hedef
+        olgunluk seviyesini, otonomi derecesini, geçiş hızını ve fazlı bir yol
+        haritasını** içeren bir rapor sunar.
+        Aşağıdaki alanlar analizi hızlandırır; emin olmadıklarınızı boş bırakabilirsiniz.
   - type: input
     id: company
     attributes:
-      label: "Firma / Ekip"
-      placeholder: "Örn. Mutfak Yazılımevi — Platform ekibi"
+      label: "Firma / Ekip ve sektör"
+      placeholder: "Örn. Mutfak Yazılımevi — Platform ekibi (fintech)"
+    validations:
+      required: false
+  - type: dropdown
+    id: ai-usage
+    attributes:
+      label: "Şu anki AI kullanımınız"
+      options:
+        - "Hiç kullanmıyoruz"
+        - "Bireysel / dağınık (kişiye bağlı)"
+        - "Ekip çapında, kısmen standart"
+        - "Yaygın ve otomatik iş akışlarında"
+    validations:
+      required: false
+  - type: input
+    id: team-size
+    attributes:
+      label: "Ekip büyüklüğü (yaklaşık)"
+      placeholder: "Örn. 12 geliştirici"
+    validations:
+      required: false
+  - type: dropdown
+    id: regulation
+    attributes:
+      label: "Regülasyon / veri hassasiyeti"
+      options:
+        - "Düşük (kritik/hassas veri yok)"
+        - "Orta (bir miktar kişisel/ticari veri)"
+        - "Yüksek (KVKK/finans/sağlık vb. sıkı uyumluluk)"
     validations:
       required: false
   - type: textarea
     id: goal
     attributes:
-      label: "Kısaca hedefiniz nedir?"
-      description: "AI dönüşümünden temel beklentiniz (hız, kalite, maliyet, güvenlik...)"
-      placeholder: "Örn. Kod inceleme süremizi kısaltmak ve sürüm sıklığını artırmak istiyoruz."
+      label: "Temel hedefiniz / derdiniz nedir?"
+      description: "AI dönüşümünden beklentiniz: hız, kalite, maliyet, ölçek, güvenlik..."
+      placeholder: "Örn. Kod inceleme süremizi kısaltmak ve sürüm sıklığını artırmak; ama hassas veri nedeniyle kontrolü elde tutmak istiyoruz."
     validations:
       required: true
