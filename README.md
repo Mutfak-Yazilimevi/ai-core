@@ -30,6 +30,10 @@ Hangi yöntem size uyuyorsa onunla başlayın:
 
 - **Konuya göre derinleşme** → aşağıdaki kategori sayfaları.
 
+- **Yapıtaşı oluşturma rehberleri** → **[🛠️ rehberler/](rehberler/)**
+  Skill, Subagent, Hook, Slash Command ve MCP'yi Claude Code üzerinde **nasıl
+  oluşturacağınızı** amaç, kurallar ve çalışan örneklerle anlatır.
+
 ### Kategoriler
 
 | # | Kategori | Ne anlatır? |
