@@ -12,8 +12,14 @@ kurulum gerektirmez — tamamen **GitHub Issues** üzerinden sohbet eder.
 
 ## Ne yapar?
 
-Tek tip bir "AI'a geçin" tavsiyesi vermez. Sizi **dinler**, koşullarınıza göre
-sorularını **derinleştirir** ve şunları içeren gerçekçi bir rapor üretir:
+Tek tip bir "AI'a geçin" tavsiyesi vermez ve **belirli bir markaya bağlı kalmaz**.
+Önerileri **sağlayıcıdan bağımsızdır** (vendor-agnostic): yönetilen bulut LLM'leri,
+özel bulut/VPC içi barındırma veya **self-hosted açık kaynak** modeller arasından
+sizin verinize, maliyetinize ve uyumluluğunuza uygun olanı **dengeli seçeneklerle**
+sunar; satın-alma bağımlılığını (lock-in) azaltacak açık standartlar önerir.
+
+Sizi **dinler**, koşullarınıza göre sorularını **derinleştirir** ve şunları içeren
+gerçekçi bir rapor üretir:
 
 - **Mevcut durumunuz** — hangi olgunluk seviyesindesiniz (0–5).
 - **Önerilen hedef seviye** — mantıken nereye ulaşmalısınız ve **neden daha
