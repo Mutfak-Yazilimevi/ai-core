@@ -31,8 +31,13 @@ jobs:
       - name: Repoyu çek
         uses: actions/checkout@v4
 
-      - name: Pages yapılandır
+      - name: Pages yapılandır (yoksa otomatik etkinleştir)
         uses: actions/configure-pages@v5
+        with:
+          # Pages henüz açık değilse API ile "GitHub Actions" kaynağı olarak
+          # otomatik etkinleştirmeyi dener. (Bazı org repolarında politika gereği
+          # engellenebilir; o durumda Settings → Pages → Source: GitHub Actions.)
+          enablement: true
 
       - name: Artefaktı yükle (web/)
         uses: actions/upload-pages-artifact@v3
