@@ -42,6 +42,15 @@ Sayfa, Issue açıp yorum yazmak için bir **fine-grained Personal Access Token*
 > açık bir bilgisayarda kullandıysanız **"Token'ı temizle"** ile silin. Token'ı
 > mümkün olan en dar izinle (yalnızca Issues) ve kısa ömürle oluşturun.
 
+## Sorun giderme
+
+- **Pages deploy ~2 sn'de hatayla bitiyor / `Get Pages site failed`:** Pages henüz
+  "GitHub Actions" kaynağıyla açık değildir. Çözüm: **Settings → Pages → Build and
+  deployment → Source: GitHub Actions** seçin, sonra Actions sekmesinden workflow'u
+  **Re-run** edin (veya `web/`'e küçük bir değişiklik gönderin). Workflow ayrıca
+  `configure-pages` adımında `enablement: true` ile otomatik açmayı dener; ancak bazı
+  organizasyon repolarında politika gereği bu engellenebilir — o durumda ayarı elle açın.
+
 ## Notlar
 
 - Ajanın yanıtı, arka planda GitHub Actions çalıştığı için **~10–60 sn** sürebilir;
