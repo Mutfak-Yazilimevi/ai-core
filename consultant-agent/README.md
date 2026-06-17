@@ -9,6 +9,9 @@ kurulum gerektirmez — tamamen **GitHub Issues** üzerinden sohbet eder.
 > **<https://github.com/Mutfak-Yazilimevi/ai-core/issues/new?template=consultant-request.yml>**
 >
 > _(Kendi kopyanızda çalıştırıyorsanız adres `…/<kullanıcı-adınız>/ai-core/…` olur.)_
+>
+> 🌐 Tarayıcıdan sohbet etmek isterseniz GitHub Pages'te çalışan bir **web arayüzü**
+> de vardır — bkz. [`../web/`](../web/).
 
 ## Ne yapar?
 
