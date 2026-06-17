@@ -77,6 +77,9 @@ ve geçiş yol haritası** çıkarır. Sunucu gerektirmez; tamamen **GitHub Issu
 >
 > _(Kendi kopyanızda çalıştırıyorsanız bu adres `…/<kullanıcı-adınız>/ai-core/…`
 > biçiminde olacaktır.)_
+>
+> 🌐 **Web arayüzü:** GitHub Issues ekranına girmeden tarayıcıdan sohbet etmek için
+> GitHub Pages'te çalışan bir arayüz de vardır — bkz. [`web/`](web/).
 
 ### Ne yapar?
 

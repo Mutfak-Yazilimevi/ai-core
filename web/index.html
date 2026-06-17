@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Benimseme Danışmanı</title>
+  <meta name="description" content="Firmanızın AI benimseme olgunluğunu analiz edip sağlayıcıdan bağımsız bir yol haritası çıkaran danışman." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Markdown render + sanitize (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧭</span>
+      <div>
+        <h1>AI Benimseme &amp; Dönüşüm Danışmanı</h1>
+        <p class="subtitle">Sağlayıcıdan bağımsız analiz &amp; yol haritası — GitHub üzerinden</p>
+      </div>
+    </div>
+    <button id="settingsBtn" class="ghost" title="Ayarlar">⚙️ Ayarlar</button>
+  </header>
+
+  <!-- Ayarlar paneli -->
+  <section id="settings" class="settings hidden">
+    <h2>Ayarlar</h2>
+    <label>
+      Depo (owner/repo)
+      <input id="repoInput" type="text" placeholder="Mutfak-Yazilimevi/ai-core" />
+    </label>
+    <label>
+      GitHub Token (fine-grained PAT — Issues: Read &amp; write)
+      <input id="tokenInput" type="password" placeholder="github_pat_..." autocomplete="off" />
+    </label>
+    <p class="hint">
+      🔒 Token yalnızca <strong>bu tarayıcıda</strong> (localStorage) saklanır; başka
+      hiçbir yere gönderilmez — sadece doğrudan GitHub API'sine. Oluşturmak için:
+      GitHub → <em>Settings → Developer settings → Personal access tokens →
+      Fine-grained tokens</em> → ilgili depoya <em>Issues: Read and write</em> izni.
+    </p>
+    <div class="row">
+      <button id="saveSettings" class="primary">Kaydet</button>
+      <button id="clearToken" class="ghost">Token'ı temizle</button>
+    </div>
+  </section>
+
+  <!-- Başlangıç ekranı -->
+  <section id="start" class="panel hidden">
+    <h2>Yeni danışmanlık başlatın</h2>
+    <p>
+      Ajan; firmanızın AI'ı <strong>ne ölçüde ve nasıl</strong> benimsemesi
+      gerektiğini analiz eder, <strong>sağlayıcıdan bağımsız</strong> bir olgunluk
+      değerlendirmesi, güvenlik önerileri ve fazlı bir <strong>yol haritası</strong> sunar.
+    </p>
+    <textarea id="firstMessage" rows="4"
+      placeholder="Kısaca firmanız ve hedefiniz: sektör, ekip büyüklüğü, mevcut AI kullanımı ve temel beklentiniz (hız/kalite/maliyet/güvenlik)..."></textarea>
+    <button id="startBtn" class="primary">Danışmanlığı Başlat</button>
+    <p id="startError" class="error"></p>
+  </section>
+
+  <!-- Sohbet ekranı -->
+  <section id="chat" class="panel chat hidden">
+    <div class="chat-head">
+      <span id="issueMeta" class="meta"></span>
+      <button id="newBtn" class="ghost" title="Yeni danışmanlık">＋ Yeni</button>
+    </div>
+    <div id="messages" class="messages" aria-live="polite"></div>
+    <div id="typing" class="typing hidden">Ajan yanıt hazırlıyor… <span class="dots"></span></div>
+    <form id="composer" class="composer">
+      <textarea id="composerInput" rows="2" placeholder="Yanıtınızı yazın…"></textarea>
+      <button type="submit" class="primary" id="sendBtn">Gönder</button>
+    </form>
+    <p id="chatError" class="error"></p>
+  </section>
+
+  <footer class="foot">
+    Bu arayüz; GitHub Issues üzerinde çalışan danışman ajanına bağlanır. Ajanın
+    yanıtı, arka planda GitHub Actions çalıştığı için ~10–60 sn sürebilir.
+    <a href="https://github.com/Mutfak-Yazilimevi/ai-core/tree/main/consultant-agent" target="_blank" rel="noopener">Nasıl çalışır?</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
